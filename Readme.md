@@ -1,8 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Максим Шальнев](https://up.htmlacademy.ru/adaptive/15/user/634397).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Андрей Чепулис](https://htmlacademy.ru/profile/id240237).
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
