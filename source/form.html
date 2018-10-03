@@ -18,17 +18,17 @@
       </a>
     </p>
     <button class="page-header__toggle-menu toggle-menu js-nav" type="button">Открыть меню</button>
-    <nav class="page-header__nav js-nav--hidden">
-      <ul class="page-header__nav--list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+    <nav class="page-header__nav page-nav js-nav-hidden">
+      <ul class="page-nav__list">
+        <li class="page-nav__item">
+          <a class="page-nav__link" href="#">Каталог товаров</a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">Вязание на заказ</a>
+        <li class="page-nav__item">
+          <a class="page-nav__link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
     </nav>
-    <ul class="page-header__nav--list user-list js-nav--hidden">
+    <ul class="page-header__list user-list js-nav-hidden">
       <li class="user-list__item user-list__item--search">
         <a class="user-list__link" href="/search.html">Поиск по сайту</a>
       </li>
@@ -36,7 +36,7 @@
         <a class="user-list__link" href="/basket.html">Корзина: пока пуста</a>
       </li>
     </ul>
-    <ul class="page-header__nav--list order-list js-nav--hidden">
+    <ul class="page-header__list order-list js-nav-hidden">
       <li class="order-list__item">
         <a class="order-list__link" href="#">Новые поступления</a>
       </li>
@@ -130,7 +130,7 @@
       </fieldset>
       <fieldset class="form__field">
         <legend class="form__legend">доп</legend>
-        <p class="input-textarea__item">
+        <p class="input-textarea">
           <textarea name="message" placeholder="Опишите все ваши пожелания к заказу" cols="30" rows="10"></textarea>
         </p>
       </fieldset>
@@ -141,7 +141,7 @@
 </main>
 <footer class="page-footer">
   <h2 class="visually-hidden">Ищите нас в социальных сетях</h2>
-  <div class="page-footer--social social">
+  <div class="page-footer__social social">
     <ul class="social__list">
       <li class="social__item"><a class="social__link social__link--in" href="#" aria-label="Мы в Instagram">я
         иконка</a></li>
