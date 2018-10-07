@@ -1,0 +1,37 @@
+// Fonts
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/opensans.woff2") format("woff2"), url("../../fonts/opensans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/opensansbold.woff2") format("woff2"), url("../../fonts/opensansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$main-font-family: "Open Sans";
+$reserve-font-family: "Verdana";
+$category-fonts: sans-serif;
+$fon-height: 24px;
+
+// Colors
+$main-bg-color: #ffffff;
+$section-bg-color: #f1f1f1;
+$word-color: #444444;
+$interactive-color: #62d1ba;
+$total-color: #000000;
+$border-color: #ececec;
+
+// interactive opacity
+$link-hover-opacity: 0.6;
+$link-down-opacity: 0.3;
+
+// Sizes
+$main-word-size: 17px;
+$border-width: 1px;
+$view-port-tablet: 768px;
+$view-port-desktop: 1150px;
