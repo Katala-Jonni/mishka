@@ -1,0 +1,65 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$video-icon: "icon-video.svg";
+$play-icon: "icon-play.svg";
+$indent-wrap: 12;
+
+.card-video {
+  @include clear;
+  @include flex-center();
+  border: $border-width solid $border-color;
+}
+
+.card-video__wrapper {
+  width: $description-width - $indent-wrap;
+  margin: 0 auto;
+}
+
+.card-video__title {
+  @include clear;
+  @include flex-center(row);
+  @include text($fz: 17px);
+  margin-top: 23px;
+}
+
+.card-video__title::before {
+  @include icon($icon: $video-icon, $width: 32px, $height: 32px, $m: 6px 24px 0 0);
+  content: "";
+  display: inline-block;
+}
+
+.card-video__img {
+  width: 260px;
+  height: 150px;
+}
+
+.card-video__box {
+  position: relative;
+  margin-top: 24px;
+}
+
+.card-video__play {
+  @include icon($icon: $play-icon, $width: 101px, $height: 77px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -53%);
+  border: none;
+  cursor: pointer;
+}
+
+.card-video__wrapper--des {
+  margin-top: 21px;
+  margin-bottom: 32px;
+}
+
+.card-video__text {
+  @include clear;
+  @include text($fz: 13px, $fw: normal, $lh: 24px, $color: $word-color);
+  margin-bottom: 25px;
+}
+
+.card-video__button {
+  width: $description-width - 16;
+}

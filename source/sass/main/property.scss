@@ -1,0 +1,27 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.property {
+  @include text($fz: 15px, $fw: normal, $color: $word-color);
+  width: 100%;
+  margin-top: 19px;
+}
+
+.property__body {
+  width: inherit;
+}
+
+.property__field {
+  width: 37.5%;
+}
+
+.property__item {
+  @include flex-center(row);
+  width: 100%;
+  padding: 7px 0 6px 0;
+  border-bottom: $border-width solid $border-color;
+}
+
+.property__item:nth-child(3) {
+  padding-bottom: 9px;
+}

@@ -1,0 +1,25 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$bg-color: #fafafa;
+
+.promo {
+  &--background {
+    background: $bg-color url("../../img/hero-mobile@1x.jpg") no-repeat 50% -15%;
+    background-size: auto;
+  }
+}
+
+.promo__subtitle {
+  @include text($fz: 27px, $lh: 30px);
+  text-align: center;
+}
+
+.promo__order {
+  @include flex-center();
+}
+
+.promo__products {
+  width: $view-port-mobile;
+  margin: 0 auto;
+}

@@ -1,0 +1,31 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.page-catalog {
+  @include clear;
+  @include flex-center();
+  width: 100%;
+}
+
+.page-catalog__wrapper-title {
+  @include flex-center();
+  @include page-title();
+  margin-bottom: 30px;
+}
+
+.page-catalog__wrapper {
+  @include clear;
+  @include container;
+}
+
+.page-catalog__title {
+  @include clear;
+  @include text($fz: 27px, $lh: 30px);
+  margin: 0 auto;
+}
+
+.page-catalog__video {
+  @include clear;
+  @include flex-center();
+  margin-bottom: 19px;
+}

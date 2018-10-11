@@ -1,0 +1,7 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.products {
+  @include clear-list;
+  @include flex-center();
+}

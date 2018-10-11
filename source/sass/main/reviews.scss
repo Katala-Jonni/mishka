@@ -1,0 +1,38 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.reviews__title {
+  @include clear;
+  margin-bottom: 27px;
+}
+
+.reviews__item {
+  @include clear;
+  @include flex-center();
+}
+
+.reviews__text {
+  @include clear;
+  @include text($fz: 15px, $fw: normal, $lh: 30px, $color: $word-color);
+  margin-bottom: 27px;
+}
+
+.reviews__controls {
+  @include clear;
+  margin-top: 32px;
+  margin-bottom: 38px;
+}
+
+.reviews__author {
+  @include flex-center();
+  @include text($fw: normal);
+}
+
+.reviews__author-name {
+  margin-bottom: 6px;
+}
+
+.reviews__write {
+  @include text($fz: 18px, $lh: 20px);
+  width: calc(100% - 4px);
+}

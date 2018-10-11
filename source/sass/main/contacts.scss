@@ -1,0 +1,32 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.contacts {
+  @include flex-center();
+  line-height: 30px;
+}
+
+.contacts__title {
+  @include clear;
+  @include text($fz: 18px, $lh: 30px);
+}
+
+.contacts__list {
+  @include clear-list;
+  @include flex-center();
+  margin-top: 26px;
+}
+
+.contacts__item {
+  @include flex-center(row);
+  @include text($fz: 15px, $fw: normal, $lh: 30px, $color: $word-color);
+  margin-bottom: 30px;
+}
+
+.contacts__field {
+  margin-right: 30px;
+}
+
+.contacts__value--border-decor {
+  border-bottom: $border-width solid $interactive-color;
+}

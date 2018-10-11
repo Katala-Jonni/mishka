@@ -1,0 +1,87 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.page-main {
+  @include flex-center();
+}
+
+.page-main__promo-wrapper,
+.page-main__hit-wrapper,
+.page-main__advantage-wrapper,
+.page-main__reviews-wrapper,
+.page-main__contacts--wrapper {
+  @include clear;
+  @include container;
+}
+
+.page-main__slogan {
+  text-align: center;
+  padding-top: 69px;
+  margin-bottom: 120px;
+}
+
+.page-main__promo {
+  @include clear;
+  width: 100%;
+}
+
+.page-main__hit {
+  @include clear;
+  width: 100%;
+}
+
+.page-main__decor-line {
+  margin-top: 36px;
+  margin-bottom: 30px;
+}
+
+.page-main__reviews-decor-line {
+  margin-top: 45px;
+}
+
+.page-main__advantage {
+  @include clear;
+  width: 100%;
+}
+
+.page-main__reviews {
+  @include clear;
+  width: 100%;
+}
+
+.page-main__reviews-wrapper {
+  padding-top: 28px;
+}
+
+.page-main__contacts {
+  @include clear;
+  @include flex-center();
+  width: 100%;
+}
+
+.page-main__contacts--wrapper {
+  margin-top: 35px;
+}
+
+.page-main__map {
+  @include flex-center();
+  width: $view-port-mobile;
+  height: 457px;
+  margin: 6px auto 0;
+  background: #ffffff url("../../img/map-mobile@1x.jpg") no-repeat;
+}
+
+.page-main__write {
+  @include clear;
+  width: 100%;
+}
+
+.page-main__write--wrapper {
+  @include container;
+  margin-top: 39px;
+}
+
+.page-main__write-btn {
+  @include text($fz: 18px, $lh: 20px, $color: $word-color);
+  width: calc(100% - 4px);
+}

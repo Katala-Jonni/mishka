@@ -1,0 +1,39 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.form {
+  @include clear;
+  @include flex-center();
+}
+
+.form__field {
+  @include clear;
+  width: 100%;
+  border: none;
+  border-top: $border-width solid $interactive-color;
+}
+
+.form__legend {
+  @include text($fz: 17px, $lh: 16px, $color: $interactive-color);
+  text-transform: uppercase;
+  padding-right: 25px;
+}
+
+.form__item {
+  @include text($fz: 17px, $lh: 18px);
+}
+
+.form__warning {
+  @include clear;
+  @include text($fw: normal, $color: $word-color, $lh: 16px);
+  width: 100%;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.form__btn {
+  width: 100%;
+  background: transparent;
+  margin-top: 31px;
+  margin-bottom: 16px;
+}

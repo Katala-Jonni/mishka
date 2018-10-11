@@ -1,0 +1,11 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.order-form__description {
+  @include clear;
+  @include text($fz: 13px, $fw: normal, $lh: 24px, $color: $word-color);
+}
+
+.order-form__main {
+  margin-top: 24px;
+}
