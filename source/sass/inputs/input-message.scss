@@ -1,0 +1,23 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.input-message {
+  @include clear-list;
+  @include flex-center();
+  width: 100%;
+  margin-top: 25px;
+}
+
+.input-message__item {
+  width: calc(100% - 34px);
+  height: 121px;
+  font-size: 17px;
+  line-height: 18px;
+  color: $word-color;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  outline: none;
+  resize: none;
+  border: 2px solid $total-color;
+}

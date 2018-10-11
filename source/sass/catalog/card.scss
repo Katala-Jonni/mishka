@@ -1,0 +1,69 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$action-icon: "icon-cart.svg";
+$img-height: 195px;
+
+.card {
+  @include flex-center();
+}
+
+.card__title {
+  @include clear;
+}
+
+.card__image {
+  height: $img-height;
+}
+
+.card__description-box {
+  width: calc(100% - 2px);
+  border: $border-width solid $border-color;
+}
+
+.card__description {
+  @include flex-center();
+  width: $description-width;
+  margin: 25px auto 27px;
+}
+
+.card__title-link {
+  @include text($fz: 17px, $lh: 24px);
+}
+
+.card__params {
+  @include clear;
+  @include text($fz: 13px, $fw: normal, $lh: 30px, $color: $word-color);
+  margin-top: 5px;
+}
+
+.card__description-brd {
+  width: 100%;
+  margin-top: 18px;
+  border: $border-width solid $border-color;
+}
+
+.card__pay {
+  @include clear;
+  @include flex-center(row, space-between);
+  width: 100%;
+  margin-top: 21px;
+}
+
+.card__action {
+  @include clear;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card__action::after {
+  @include icon($icon: $action-icon, $width: 20px, $height: 19px);
+  content: "";
+  display: block;
+  opacity: 0.2;
+}
+
+.card__price {
+  @include text($fz: 15px, $lh: 24px);
+}

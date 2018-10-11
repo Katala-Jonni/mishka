@@ -1,0 +1,57 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.toggle-menu {
+  @include clear;
+  @include flex-center(row, $justify: flex-end);
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 25px;
+  height: 30px;
+  outline: none;
+  background: transparent;
+  margin-top: -5px;
+}
+
+.toggle-menu__item,
+.toggle-menu__item::before,
+.toggle-menu__item::after {
+  content: "";
+  height: 3px;
+  width: 21px;
+  border-radius: 1px;
+  background: $total-color;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.toggle-menu__item::before {
+  top: -6px;
+}
+
+.toggle-menu__item::after {
+  bottom: -6px;
+}
+
+.toggle-menu__item--active {
+  background-color: transparent;
+  transform: translateX(-4px);
+}
+
+.toggle-menu__item--active::before,
+.toggle-menu__item--active::after {
+  height: 3px;
+  width: 28px;
+  top: 0;
+}
+
+.toggle-menu__item--active::before {
+  transform: rotate(45deg);
+}
+
+.toggle-menu__item--active::after {
+  transform: rotate(-45deg);
+}

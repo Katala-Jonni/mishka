@@ -4,13 +4,14 @@
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
-    "browser-sync": "2.24.x",
+    "browser-sync": "^2.24.7",
     "gulp": "4.0.x",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
     "gulp-sass": "4.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
+    "node-normalize-scss": "^8.0.0",
     "stylelint": "9.6.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -36,5 +37,15 @@
   ],
   "engines": {
     "node": "8.12"
+  },
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "stream-combiner2": "^1.1.1"
   }
 }

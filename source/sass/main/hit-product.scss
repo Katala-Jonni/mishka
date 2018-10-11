@@ -1,0 +1,48 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.hit-product {
+  @include flex-center();
+}
+
+.hit-product__caption {
+  padding-top: 27px;
+  margin-bottom: 20px;
+}
+
+.hit-product__title {
+  @include clear;
+  @include text($fz: 25px, $lh: 30px);
+  margin-bottom: 4px;
+}
+
+.hit-product__subtitle {
+  @include clear;
+  @include text($color: $interactive-color);
+  text-transform: uppercase;
+}
+
+.hit-product__description {
+  @include clear;
+  @include text($fz: 15px, $fw: normal, $color: $word-color);
+}
+
+.hit-product__property {
+  @include clear-list;
+  @include flex-center();
+}
+
+.hit-product__picture {
+  margin-top: 28px;
+}
+
+.hit-product__price {
+  @include clear;
+  @include text();
+  margin-top: 19px;
+  align-self: center;
+}
+
+.hit-product__button {
+  margin-top: 25px;
+}

@@ -1,0 +1,25 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.page-order {
+  @include clear;
+  @include flex-center();
+  width: 100%;
+}
+
+.page-order__wrapper-title {
+  @include flex-center();
+  @include page-title();
+  margin-bottom: 22px;
+}
+
+.page-order__title {
+  @include clear;
+  @include text($fz: 27px, $lh: 30px, $color: #231f20);
+  margin: 0 auto;
+}
+
+.page-order__wrapper {
+  @include clear;
+  @include container;
+}

@@ -1,0 +1,61 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+// icons
+$flower: "icon-feature-flower.svg";
+$money: "icon-feature-money.svg";
+$heart: "icon-feature-heart.svg";
+$ball: "icon-feature-ball.svg";
+$rocket: "icon-feature-rocket.svg";
+$gift: "icon-feature-gift.svg";
+
+.advantage {
+  @include clear;
+  @include flex-center();
+}
+
+.advantage__subtitle {
+  @include clear;
+  @include text($fz: 25px);
+  margin-bottom: 35px;
+}
+
+.advantage__list {
+  @include clear-list;
+  @include flex-center();
+}
+
+.advantage__item {
+  @include text($fz: 17px, $lh: 1.2);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.advantage__item::before {
+  content: "";
+  display: block;
+}
+
+.advantage__item--ecology::before {
+  @include icon($icon: $flower, $width: 32px, $height: 37px, $m: 0 0 17px 8px);
+}
+
+.advantage__item--economy::before {
+  @include icon($icon: $money, $width: 47px, $height: 27px, $m: 0 0 26px 0);
+}
+
+.advantage__item--like::before {
+  @include icon($icon: $heart, $width: 45px, $height: 28px, $m: 4px 0 21px 7px);
+}
+
+.advantage__item--handmade::before {
+  @include icon($icon: $ball, $width: 35px, $height: 34px, $m: 2px 0 17px 4px);
+}
+
+.advantage__item--native-land::before {
+  @include icon($icon: $rocket, $width: 55px, $height: 24px, $m: 3px 0 26px -6px);
+}
+
+.advantage__item--gift-box::before {
+  @include icon($icon: $gift, $width: 33px, $height: 32px, $m: 1px 0 20px 3px);
+}

@@ -1,0 +1,33 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.page-footer {
+  @include clear;
+  @include flex-center();
+  width: 100%;
+  background: $section-bg-color;
+  margin-top: 39px;
+}
+
+.page-footer__wrapper {
+  @include flex-center();
+  @include clear;
+  @include container;
+}
+
+.page-footer__social {
+  width: 100%;
+  padding-top: 23px;
+  padding-bottom: 30px;
+  border-bottom: $border-width solid #e5e5e5;
+}
+
+.page-footer__social-list {
+  @include clear-list;
+  margin-left: 57px;
+}
+
+.page-footer__copyright {
+  padding-top: 18px;
+  padding-bottom: 24px;
+}

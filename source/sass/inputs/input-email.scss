@@ -1,0 +1,41 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$icon-email: "icon-mail.svg";
+
+.input-email {
+  @include clear-list;
+  @include flex-center();
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-email__item {
+  @include flex-center(row, $justify: space-between);
+  width: 100%;
+  border-bottom: 2px solid $total-color;
+  margin-bottom: 22px;
+  margin-top: 6px;
+}
+
+.input-email__input {
+  @include clear;
+  width: calc(100% - 40px);
+  padding-top: 16px;
+  padding-bottom: 17px;
+  font-size: 17px;
+  line-height: 18px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.input-email__label {
+  background: transparent url("../../img/#{$icon-email}") no-repeat;
+  width: 32px;
+  height: 26px;
+  margin-top: 12px;
+  margin-right: 4px;
+  opacity: 0.2;
+  cursor: pointer;
+}

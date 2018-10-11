@@ -1,0 +1,11 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.catalog__list {
+  @include clear-list;
+  @include flex-center();
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+}

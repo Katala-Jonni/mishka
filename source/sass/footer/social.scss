@@ -1,0 +1,33 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$in: "icon-insta.svg";
+$fb: "icon-fb.svg";
+$tw: "icon-twitter.svg";
+
+.social {
+  @include flex-center();
+  width: 100%;
+}
+
+.social__list {
+  @include flex-center(row, $align: baseline);
+}
+
+.social__item {
+  @include flex-center(row);
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.social__link--in {
+  @include icon($icon: $in, $width: 22px, $height: 21px, $m: 0);
+}
+
+.social__link--fc {
+  @include icon($icon: $fb, $width: 15px, $height: 28px, $m: 0);
+}
+
+.social__link--tw {
+  @include icon($icon: $tw, $width: 23px, $height: 20px, $m: 0);
+}

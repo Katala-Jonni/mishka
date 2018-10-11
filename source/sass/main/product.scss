@@ -1,0 +1,43 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$item-bg-color: #56c3b2;
+
+.product--decor {
+  background-color: $interactive-color;
+}
+
+.product--toy {
+  background-color: $item-bg-color;
+}
+
+.product__link {
+  @include flex-center(row);
+  @include text($fz: 19px, $color: #ffffff);
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 29px;
+}
+
+.product__link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.product__link--decor::after {
+  background: url("../../img/icon-interior.svg") no-repeat;
+  width: 40px;
+  height: 62px;
+  right: 6px;
+  top: 23px;
+}
+
+.product__link--toy::after {
+  background: url("../../img/icon-toy.svg") no-repeat;
+  width: 60px;
+  height: 80px;
+  right: -3px;
+  top: 21px;
+}

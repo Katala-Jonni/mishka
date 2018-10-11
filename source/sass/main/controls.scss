@@ -1,0 +1,37 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.controls {
+  @include flex-center(row);
+  width: 100%;
+}
+
+.controls__button {
+  @include clear;
+  @include flex-center($justify: center, $align: center);
+  width: 50%;
+  border: $border-width solid $border-color;
+  background: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.controls__button::before {
+  content: "";
+  width: 50px;
+  height: 26px;
+}
+
+.controls__button--prev::before {
+  background: transparent url("../../img/icon-left-arrow.svg") no-repeat;
+}
+
+.controls__button--next {
+  border-left: none;
+}
+
+.controls__button--next::before {
+  background: transparent url("../../img/icon-right-arrow.svg") no-repeat;
+}

@@ -1,0 +1,35 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.input-checkbox {
+  @include clear-list;
+  @include flex-center();
+  margin-top: 26px;
+  margin-bottom: 9px;
+}
+
+.input-checkbox__item {
+  @include flex-center($align: center);
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.input-checkbox__label {
+  width: calc(100% - 63px);
+  height: 39px;
+  padding-left: 63px;
+  padding-top: 10px;
+  position: relative;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.input-checkbox__label::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 39px;
+  top: 0;
+  left: 0;
+  outline: 1px solid red;
+}

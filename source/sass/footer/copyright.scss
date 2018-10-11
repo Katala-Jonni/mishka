@@ -1,0 +1,20 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$academy: "logo-htmlacademy.svg";
+
+.copyright {
+  @include clear;
+  @include flex-center(row, space-between, center);
+  width: 183px;
+  margin: 0 auto;
+}
+
+.copyright__text {
+  @include text($fz: 19px, $lh: 18px);
+}
+
+.copyright__link {
+  @include icon($icon: $academy, $width: 27px, $height: 34px);
+  cursor: pointer;
+}

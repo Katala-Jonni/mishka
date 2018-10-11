@@ -1,0 +1,46 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.page-header {
+  @include flex-center($align: flex-start);
+  border-bottom: $border-width solid $border-color;
+  border-top: $border-width solid $border-color;
+}
+
+.page-header__logo-menu {
+  @include flex-center($direction: row, $justify: space-between, $align: center);
+}
+
+.page-header__logo {
+  @include clear;
+  margin-left: 86px;
+  padding-top: 21px;
+  padding-bottom: 16px;
+}
+
+.page-header__link {
+  padding-left: 45px;
+}
+
+.page-header__nav {
+  width: 100%;
+}
+
+.page-header__wrapper {
+  @include clear;
+  @include container;
+}
+
+.page-header__list {
+  @include clear-list;
+}
+
+.page-header__item {
+  padding-top: 26px;
+  padding-bottom: 28px;
+  border-top: $border-width solid $border-color;
+}
+
+.page-header__nav-hid {
+  width: 100%;
+}

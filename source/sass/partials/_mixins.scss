@@ -1,0 +1,48 @@
+@import "params";
+
+@mixin clear {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clear-list {
+  @include clear;
+  list-style: none;
+}
+
+@mixin flex-center($direction: column, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+
+@mixin text($fz: $font-size, $fw: bold, $color: $total-color, $lh: $line-height, $fs: normal) {
+  font-size: $fz;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin container() {
+  width: $view-port-mobile-inline;
+  padding-left: $wrapper-indent;
+  padding-right: $wrapper-indent;
+  margin: 0 auto;
+}
+
+@mixin icon($icon, $width, $height, $m: 0) {
+  background: transparent url("../img/#{$icon}") no-repeat;
+  width: $width;
+  height: $height;
+  margin: $m;
+}
+
+@mixin page-title() {
+  width: 100%;
+  background: $section-bg-color;
+  padding-top: 70px;
+  padding-bottom: 76px;
+}

@@ -1,0 +1,29 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+$icon-search: "icon-search.svg";
+$icon-cart: "icon-cart.svg";
+
+.user-list__link {
+  @include text();
+  position: relative;
+}
+
+.user-list__link::before {
+  content: "";
+  height: 18px;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.user-list__link--search::before {
+  @include icon($icon-search, 18px, 18px);
+  top: 5px;
+  left: 2px;
+}
+
+.user-list__link--basket::before {
+  @include icon($icon-cart, 21px, 18px);
+  top: 3px;
+  left: 0;
+}

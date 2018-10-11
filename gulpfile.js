@@ -1,22 +1,38 @@
 "use strict";
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const server = require("browser-sync").create();
+const cleanCss = require('gulp-clean-css');
+const concat = require('gulp-concat');
+const gulpIf = require('gulp-if');
+const notify = require('gulp-notify');
+const sourceMaps = require('gulp-sourcemaps');
+const combiner = require('stream-combiner2').obj;
+const del = require('del');
 
-gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
+const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+
+gulp.task("css", () => {
+  return combiner(
+    gulp.src("source/sass/**/*.scss"),
+    gulpIf(isDevelopment, sourceMaps.init()),
+    sass({
+      includePaths: require('node-normalize-scss').includePaths
+    }),
+    concat('style.min.css'),
+    autoprefixer({
+      browsers: ["last 2 versions"]
+    }),
+    gulpIf(isDevelopment, cleanCss()),
+    gulpIf(isDevelopment, sourceMaps.write()),
+    gulp.dest("source/css")
+  ).on("error", notify.onError())
+    .pipe(server.stream())
 });
+
+gulp.task("clean", () => del("source/css"));
 
 gulp.task("server", function () {
   server.init({
@@ -31,4 +47,4 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series("clean", "css", "server"));
