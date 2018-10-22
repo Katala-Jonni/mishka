@@ -199,6 +199,7 @@
 
   .page-main__wrapper {
     display: block;
+    margin-bottom: 48px;
   }
 
   .page-main__contacts,
@@ -237,56 +238,4 @@
   .page-main__write-wrapper {
     @include clear;
   }
-
-  .page-main__wrapper {
-    margin-bottom: 48px;
-  }
-
-  // popup
-
-  .page-main__popup {
-
-  }
-
-  //.page-main__contacts-wrapper {
-  //  @include clear;
-  //  width: 350px;
-  //  margin-left: 175px;
-  //  padding-top: 71px;
-  //}
-  //
-  //.page-main__wrapper {
-  //  @include clear;
-  //  @include container($view-port-desktop, 0, 0);
-  //  display: flex;
-  //  flex-direction: row;
-  //  align-items: stretch;
-  //  flex-wrap: wrap;
-  //  margin-bottom: 48px;
-  //}
-  //
-  //.page-main__contacts {
-  //  width: 500px;
-  //  order: 1;
-  //  margin-bottom: 53px;
-  //}
-  //
-  //.page-main__write {
-  //  width: auto;
-  //  order: 3;
-  //  margin-top: -52px;
-  //  margin-left: 175px;
-  //}
-  //
-  //.page-main__map {
-  //  @include clear;
-  //  width: 525px;
-  //  height: 457px;
-  //  order: 2;
-  //  margin-left: auto;
-  //}
-  //
-  //.page-main__write-wrapper {
-  //  @include clear;
-  //}
 }
