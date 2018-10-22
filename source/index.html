@@ -106,9 +106,11 @@
           </div>
           <picture class="hit-product__picture">
             <source media="(min-width: 1150px)"
-                    srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@1x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@1x.jpg 2x">
-            <img class="hit-product__image" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+                    srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+                    srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="hit-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+                 alt="Вязаные корзинки">
           </picture>
           <p class="hit-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках
             <span class="hit-product__description-comma">,</span> и
@@ -235,7 +237,8 @@
           <picture class="page-footer__logo-picture">
             <source media="(min-width: 1150px)" srcset="img/logo-footer.svg, img/logo-footer.svg 2x">
             <source media="(min-width: 768px)" srcset="img/logo-footer.svg, img/logo-footer.svg 2x">
-            <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Мишка - Милые штуки ручной работы для дома">
+            <img class="page-footer__logo-image" src="img/logo-footer.svg"
+                 alt="Мишка - Милые штуки ручной работы для дома">
           </picture>
         </a>
       </div>
