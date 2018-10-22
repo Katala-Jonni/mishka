@@ -21,8 +21,6 @@ $indent-wrap: 12;
   @include flex-center(row);
   @include text($fz: 17px);
   margin-top: 23px;
-  max-height: 49px;
-  overflow: scroll;
 }
 
 .card-video__title::before {
@@ -60,8 +58,6 @@ $indent-wrap: 12;
   @include clear;
   @include text($fz: 13px, $fw: normal, $lh: 24px, $color: $word-color);
   margin-bottom: 25px;
-  max-height: 200px;
-  overflow: scroll;
 }
 
 .card-video__button {
@@ -72,7 +68,6 @@ $indent-wrap: 12;
   .card-video {
     width: 100%;
     border: none;
-    // outline: 1px solid red;
   }
 
   .card-video__img {
@@ -121,8 +116,6 @@ $indent-wrap: 12;
   .card-video__title {
     @include text($fz: 20px);
     margin-top: 37px;
-    max-height: 27px;
-    overflow: scroll;
   }
 
   .card-video__title br {
@@ -169,8 +162,6 @@ $indent-wrap: 12;
 
   .card-video__title {
     margin-top: 54px;
-    max-height: 100%;
-    overflow: hidden;
     padding-left: 6px;
   }
 

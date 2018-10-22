@@ -13,8 +13,6 @@ $img-height: 195px;
 .card__title {
   @include clear;
   margin-top: 25px;
-  max-height: 50px;
-  overflow: scroll;
 }
 
 .card__image {
@@ -36,7 +34,6 @@ $img-height: 195px;
   @include flex-center();
   width: $description-width;
   margin: 0 auto;
-  overflow: scroll;
   flex-wrap: nowrap;
 }
 
@@ -48,8 +45,6 @@ $img-height: 195px;
   @include clear;
   @include text($fz: 13px, $fw: normal, $lh: 30px, $color: $word-color);
   margin-top: 5px;
-  max-height: 30px;
-  overflow: scroll;
 }
 
 .card__pay {
@@ -111,7 +106,6 @@ $img-height: 195px;
     height: calc(100% - 27px);
     margin: 24px auto 0;
     box-sizing: border-box;
-    overflow: scroll;
   }
 
   .card__title {
@@ -172,7 +166,6 @@ $img-height: 195px;
   .card__description {
     width: 256px;
     margin: 25px auto 0 26px;
-    //  width: 316px;
   }
 
   .card__params {
@@ -187,14 +180,11 @@ $img-height: 195px;
   .card__description-box {
     width: auto;
     height: 195px;
-    overflow: scroll;
-    //   border: $border-width solid $border-color;
   }
 
   .card__info {
     width: 100%;
     margin-top: auto;
-    // margin-top: 37px;
-    padding-bottom: 24;
+    padding-bottom: 24px;
   }
 }

@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <title>Каталог товаров</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 <div class="body-wrapper">
@@ -93,7 +98,8 @@
                           srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
                           srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
-                  <img class="card__img" src="img/photo-hare-mobile@1x.jpg"  alt="Зайчик попрыгайчик">
+                  <img class="card__img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-tablet@2x.jpg 2x"
+                       alt="Зайчик попрыгайчик">
                 </picture>
               </a>
             </div>
@@ -119,10 +125,11 @@
               <a class="card__img-link" href="#">
                 <picture>
                   <source media="(min-width: 1150px)"
-                          srcset="img/photo-bowl-desktop@1x.jpg, img/photo-bowl-desktop@1x.jpg 2x">
+                          srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
-                          srcset="img/photo-bowl-tablet@1x.jpg, img/photo-bowl-tablet@1x.jpg 2x">
-                  <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
+                          srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x"
+                       alt="Корзинка для белья">
                 </picture>
               </a>
             </div>
@@ -148,10 +155,11 @@
               <a class="card__img-link" href="#">
                 <picture>
                   <source media="(min-width: 1150px)"
-                          srcset="img/photo-toys-desktop@1x.jpg, img/photo-toys-desktop@1x.jpg 2x">
+                          srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
-                          srcset="img/photo-toys-tablet@1x.jpg, img/photo-toys-tablet@1x.jpg 2x">
-                  <img class="card__img" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
+                          srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x"
+                       alt="Большая корзинка для игрушек">
                 </picture>
               </a>
             </div>
@@ -186,10 +194,11 @@
           <div class="card-video__box card-video__background">
             <picture class="card-video__picture">
               <source media="(min-width: 1150px)"
-                      srcset="img/video-desktop@1x.jpg, img/video-desktop@1x.jpg 2x">
+                      srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
-                      srcset="img/video-tablet@1x.jpg, img/video-tablet@1x.jpg 2x">
-              <img class="card-video__img" src="img/video-mobile@1x.jpg" alt="Видео процесс производства">
+                      srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="card-video__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
+                   alt="Видео процесс производства">
             </picture>
             <button class="card-video__play card-video__play--icon" aria-label="Воспроизвезти"></button>
           </div>
@@ -213,7 +222,8 @@
           <picture class="page-footer__logo-picture">
             <source media="(min-width: 1150px)" srcset="img/logo-footer.svg, img/logo-footer.svg 2x">
             <source media="(min-width: 768px)" srcset="img/logo-footer.svg, img/logo-footer.svg 2x">
-            <img class="page-footer__logo-image" src="img/logo-footer.svg" alt="Мишка - Милые штуки ручной работы для дома">
+            <img class="page-footer__logo-image" src="img/logo-footer.svg"
+                 alt="Мишка - Милые штуки ручной работы для дома">
           </picture>
         </a>
       </div>
