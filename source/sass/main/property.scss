@@ -25,3 +25,36 @@
 .property__item:nth-child(3) {
   padding-bottom: 9px;
 }
+
+@media (min-width: $view-port-tablet) {
+  .property {
+    @include clear;
+    width: 290px;
+  }
+
+  .property__field {
+    width: 33%;
+  }
+
+  .property__item:nth-child(3) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .property {
+
+  }
+
+  .property__item {
+    @include clear;
+    margin-bottom: 6px;
+    padding-bottom: 8px;
+  }
+
+  .property__item:nth-child(3) {
+    padding-top: 0;
+    padding-bottom: 8px;
+  }
+}

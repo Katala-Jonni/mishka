@@ -14,6 +14,7 @@ $icon-cart: "icon-cart.svg";
   height: 18px;
   position: absolute;
   opacity: 0.2;
+  display: inline-block;
 }
 
 .user-list__link--search::before {
@@ -26,4 +27,37 @@ $icon-cart: "icon-cart.svg";
   @include icon($icon-cart, 21px, 18px);
   top: 3px;
   left: 0;
+}
+
+@media (min-width: $view-port-tablet) {
+  .user-list {
+    @include flex-center($direction: row);
+    width: 348px;
+  }
+
+  .user-list__item {
+    border-left: $border-width solid $border-color;
+  }
+
+  .user-list__item-wrap {
+    padding-top: 31px;
+    padding-bottom: 33px;
+  }
+
+  .user-list__link--basket {
+    margin-left: 32px;
+    padding-left: 50px;
+  }
+
+  .user-list__link-hid {
+    display: none;
+  }
+
+  .user-list__link--search::before {
+    left: 33px;
+  }
+
+  .user-list__link--basket::before {
+    top: 4px;
+  }
 }

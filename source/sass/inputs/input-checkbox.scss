@@ -4,7 +4,7 @@
 .input-checkbox {
   @include clear-list;
   @include flex-center();
-  margin-top: 26px;
+  margin-top: 9px;
   margin-bottom: 9px;
 }
 
@@ -32,4 +32,69 @@
   top: 0;
   left: 0;
   outline: 1px solid red;
+}
+
+@media (min-width: $view-port-tablet) {
+  .input-checkbox {
+    @include clear;
+    @include flex-center($direction: row, $justify: flex-start, $align: stretch);
+    @include form-section;
+    padding-top: 50px;
+    padding-bottom: 26px;
+  }
+
+  .input-checkbox__item {
+    @include clear;
+    @include flex-center($align: stretch);
+    width: 237px;
+    margin-right: 20px;
+    margin-bottom: 22px;
+  }
+
+  .input-checkbox__label {
+    @include clear;
+    @include text($fz: 19px, $lh: 18px);
+    padding-top: 15px;
+    padding-left: 80px;
+  }
+
+  .input-checkbox__item:nth-child(2n) {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .input-checkbox__label::before {
+    width: 54px;
+    height: 52px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .input-checkbox {
+    width: 875px;
+    margin-left: auto;
+    padding-bottom: 27px;
+  }
+
+  .input-checkbox__item:nth-child(2n) {
+    @include clear;
+    margin-left: 0;
+    margin-right: 32px;
+    margin-bottom: 20px;
+  }
+
+  .input-checkbox__item {
+    @include clear;
+    width: 230px;
+    margin-right: 32px;
+    margin-bottom: 22px;
+    box-sizing: border-box;
+  }
+
+  .input-checkbox__label {
+    width: 100%;
+    padding-left: 80px;
+    padding-bottom: 38px;
+    box-sizing: border-box;
+  }
 }

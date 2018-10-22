@@ -17,6 +17,7 @@ $item-bg-color: #56c3b2;
   position: relative;
   padding-top: 26px;
   padding-bottom: 29px;
+  padding-left: 29px;
 }
 
 .product__link::after {
@@ -30,7 +31,7 @@ $item-bg-color: #56c3b2;
   background: url("../../img/icon-interior.svg") no-repeat;
   width: 40px;
   height: 62px;
-  right: 6px;
+  right: 36px;
   top: 23px;
 }
 
@@ -38,6 +39,35 @@ $item-bg-color: #56c3b2;
   background: url("../../img/icon-toy.svg") no-repeat;
   width: 60px;
   height: 80px;
-  right: -3px;
+  right: 27px;
   top: 21px;
+}
+
+@media (min-width: $view-port-tablet) {
+  .product .page-main__promo-wrapper {
+    @include clear;
+    display: block;
+    width: auto;
+  }
+
+  .product__link {
+    @include text($fz: 20px, $lh: 30px, $color: #ffffff);
+    padding-top: 27px;
+    padding-left: 35px;
+  }
+
+  .product__link--decor::after {
+    top: 29px;
+  }
+
+  .product__link--toy::after {
+    top: 31px;
+    right: 34px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .product__link {
+    padding-top: 28px;
+  }
 }

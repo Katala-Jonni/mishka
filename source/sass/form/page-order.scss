@@ -23,3 +23,52 @@
   @include clear;
   @include container;
 }
+
+@media (min-width: $view-port-tablet) {
+  .page-order {
+    margin-top: -44px;
+    margin-bottom: -7px;
+    border-top: 1px solid #dfdfdf;
+  }
+
+  .page-order__wrapper {
+    @include clear;
+    width: 100%;
+  }
+
+  .page-order__wrapper-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    background: transparent url("../../img/bg-zigzag-fill.svg");
+    bottom: 0;
+    left: 0;
+  }
+
+  .page-order__wrapper-title {
+    @include page-title($pt: 95px, $pb: 91px);
+    position: relative;
+    margin-bottom: 62px;
+  }
+
+  .page-order__title {
+    @include text($fz: 43px, $lh: 50px);
+  }
+
+  .order-form__description {
+    @include text($fz: 17px, $fw: normal, $lh: 30px);
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .page-order__wrapper-title {
+    padding-bottom: 110px;
+    margin-bottom: 114px;
+  }
+
+  .page-order__title {
+    @include text($fz: 53px, $lh: 57px);
+  }
+}

@@ -55,3 +55,9 @@
 .toggle-menu__item--active::after {
   transform: rotate(-45deg);
 }
+
+@media (min-width: $view-port-tablet) {
+  .toggle-menu {
+    display: none;
+  }
+}

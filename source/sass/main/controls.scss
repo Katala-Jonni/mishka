@@ -35,3 +35,13 @@
 .controls__button--next::before {
   background: transparent url("../../img/icon-right-arrow.svg") no-repeat;
 }
+
+@media (min-width: $view-port-tablet) {
+  .controls__button {
+    border: none;
+  }
+
+  .controls__button:nth-child(2) {
+    padding-left: 7px;
+  }
+}

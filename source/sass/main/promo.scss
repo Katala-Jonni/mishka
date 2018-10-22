@@ -17,9 +17,87 @@ $bg-color: #fafafa;
 
 .promo__order {
   @include flex-center();
+  position: relative;
 }
 
 .promo__products {
   width: $view-port-mobile;
   margin: 0 auto;
+}
+
+///////////// tablet
+
+@media (min-width: $view-port-tablet) {
+  .promo {
+    min-height: 746px;
+  }
+
+  .promo--background {
+    background: $bg-color url("../../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+    background-size: auto;
+  }
+
+  .promo__subtitle {
+    @include text ($fz: 43px, $lh: 50px);
+    display: block;
+  }
+
+  .promo__products {
+    @include clear;
+    @include container($view-port-tablet-inline, $wrapper-tablet-indent, $wrapper-tablet-indent);
+  }
+
+  .promo__order::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    background: transparent url("../../img/bg-zigzag-fill.svg");
+    bottom: 0;
+    left: 0;
+    //z-index: 100;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .promo {
+    position: relative;
+  }
+
+  .promo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    background: transparent url("../../img/bg-zigzag-fill.svg");
+    bottom: 0;
+    left: 0;
+  }
+
+  .promo__order::after {
+    display: none;
+  }
+
+  .promo__order {
+    @include clear;
+    @include container($view-port-desktop, 50px, 50px);
+    border-top: $border-width solid $border-color;
+  }
+
+  .promo__subtitle {
+    @include text ($fz: 53px, $lh: 57px);
+  }
+
+  .promo__products {
+    @include clear;
+    width: 100%;
+  }
+
+  .promo--background {
+    width: 100%;
+    background: $bg-color url("../../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+    background-size: auto;
+  }
 }

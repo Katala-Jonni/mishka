@@ -30,3 +30,60 @@
 .contacts__value--border-decor {
   border-bottom: $border-width solid $interactive-color;
 }
+
+@media (min-width: $view-port-tablet) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts::after {
+    content: "";
+    position: absolute;
+    right: 53px;
+    top: 36px;
+    width: 47px;
+    height: 81px;
+    background: transparent url("../../img/icon-flag.svg") no-repeat;
+  }
+
+  .contacts__title {
+    @include text($fz: 43px, $lh: 50px);
+    width: 500px;
+    margin-left: -4px;
+    padding-top: 51px;
+    word-break: break-all;
+  }
+
+  .contacts__list {
+    @include flex-center($direction: row);
+    margin-top: 48px;
+  }
+
+  .contacts__item {
+    @include text($fz: 17px, $fw: normal, $lh: 30px, $color: $word-color);
+    width: 334px;
+  }
+
+  .contacts__field {
+    margin-right: 24px;
+  }
+
+  .contacts__value br:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .contacts::after {
+    content: "";
+    top: 62px;
+    left: -112px;
+  }
+
+  .contacts__title {
+    @include clear;
+    @include text($fz: 53px, $lh: 57px);
+    width: auto;
+    margin-left: -7px;
+  }
+}

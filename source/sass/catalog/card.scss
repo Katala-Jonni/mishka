@@ -6,14 +6,25 @@ $img-height: 195px;
 
 .card {
   @include flex-center();
+  flex-wrap: nowrap;
+  max-height: 400px;
 }
 
 .card__title {
   @include clear;
+  margin-top: 25px;
+  max-height: 50px;
+  overflow: scroll;
 }
 
 .card__image {
   height: $img-height;
+}
+
+.card__img {
+  width: 260px;
+  height: $img-height;
+  vertical-align: bottom;
 }
 
 .card__description-box {
@@ -24,7 +35,9 @@ $img-height: 195px;
 .card__description {
   @include flex-center();
   width: $description-width;
-  margin: 25px auto 27px;
+  margin: 0 auto;
+  overflow: scroll;
+  flex-wrap: nowrap;
 }
 
 .card__title-link {
@@ -35,12 +48,8 @@ $img-height: 195px;
   @include clear;
   @include text($fz: 13px, $fw: normal, $lh: 30px, $color: $word-color);
   margin-top: 5px;
-}
-
-.card__description-brd {
-  width: 100%;
-  margin-top: 18px;
-  border: $border-width solid $border-color;
+  max-height: 30px;
+  overflow: scroll;
 }
 
 .card__pay {
@@ -66,4 +75,126 @@ $img-height: 195px;
 
 .card__price {
   @include text($fz: 15px, $lh: 24px);
+}
+
+.card__info {
+  width: 100%;
+  margin: 19px auto 0;
+  padding-bottom: 27px;
+  border-top: 1px solid $border-color;
+}
+
+@media (min-width: $view-port-tablet) {
+  .card {
+    @include flex-center($direction: row, $justify: space-between, $align: stretch);
+    height: 334px; // временно
+  }
+
+  .card__image {
+    height: 100%;
+  }
+
+  .card__img {
+    width: 334px;
+    height: 334px;
+    vertical-align: bottom;
+  }
+
+  .card__description-box {
+    width: 332px;
+  }
+
+  .card__description {
+    @include clear;
+    flex-wrap: nowrap;
+    width: 334px - (27 * 2);
+    height: calc(100% - 27px);
+    margin: 24px auto 0;
+    box-sizing: border-box;
+    overflow: scroll;
+  }
+
+  .card__title {
+    margin-top: 0;
+    width: 232px;
+  }
+
+  .card__title-link {
+    @include text($fz: 20px, $lh: 24px);
+  }
+
+  .card__params {
+    @include text($fz: 15px, $fw: normal, $lh: 30px);
+    margin-top: 7px;
+  }
+
+  .card__price {
+    @include text($fz: 17px, $lh: 24px);
+  }
+
+  .card__description-brd {
+    display: none;
+  }
+
+  .card__pay {
+    width: 268px;
+    margin: 22px auto 0;
+  }
+
+  .card__info {
+    margin: auto auto 0;
+    padding-bottom: 24px;
+    border-top: 1px solid $border-color;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .card {
+    @include clear;
+    width: 316px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: auto;
+    max-height: 100%;
+  }
+
+  .card__img {
+    width: 316px;
+    height: 462px;
+  }
+
+  .card__image {
+    height: 462px;
+  }
+
+  .card__description {
+    width: 256px;
+    margin: 25px auto 0 26px;
+    //  width: 316px;
+  }
+
+  .card__params {
+    margin-top: 5px;
+  }
+
+  .card__pay {
+    width: auto;
+    margin-top: 22px;
+  }
+
+  .card__description-box {
+    width: auto;
+    height: 195px;
+    overflow: scroll;
+    //   border: $border-width solid $border-color;
+  }
+
+  .card__info {
+    width: 100%;
+    margin-top: auto;
+    // margin-top: 37px;
+    padding-bottom: 24;
+  }
 }

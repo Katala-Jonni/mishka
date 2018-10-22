@@ -59,3 +59,39 @@ $gift: "icon-feature-gift.svg";
 .advantage__item--gift-box::before {
   @include icon($icon: $gift, $width: 33px, $height: 32px, $m: 1px 0 20px 3px);
 }
+
+@media (min-width: $view-port-tablet) {
+  .advantage__list {
+    width: 100%;
+    height: 466px;
+  }
+
+  .advantage__subtitle {
+    @include clear;
+    @include text($fz: 43px, $lh: 50px);
+    margin-bottom: 49px;
+    margin-left: -5px;
+  }
+
+  .advantage__item {
+    @include text($fz: 20px, $lh: 22px);
+    width: 50%;
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .advantage {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .advantage__subtitle {
+    @include clear;
+    @include text($fz: 53px, $lh: 57px);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: -6px;
+  }
+}

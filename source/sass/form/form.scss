@@ -4,6 +4,12 @@
 .form {
   @include clear;
   @include flex-center();
+  width: 100%;
+}
+
+.form__action-wrapper {
+  @include flex-center(row);
+  width: 100%;
 }
 
 .form__field {
@@ -11,12 +17,17 @@
   width: 100%;
   border: none;
   border-top: $border-width solid $interactive-color;
+  margin-top: 8px;
 }
 
 .form__legend {
   @include text($fz: 17px, $lh: 16px, $color: $interactive-color);
   text-transform: uppercase;
   padding-right: 25px;
+  background: #ffffff;
+  display: inline-block;
+  position: relative;
+  top: -13px;
 }
 
 .form__item {
@@ -36,4 +47,128 @@
   background: transparent;
   margin-top: 31px;
   margin-bottom: 16px;
+}
+
+.order-form-wrapper {
+  width: 100%;
+}
+
+// tablet
+
+@media (min-width: $view-port-tablet) {
+  .form {
+    width: 100%;
+  }
+
+  .form__field {
+    @include clear;
+    @include flex-center($direction: row, $justify: flex-start, $align: stretch);
+    width: 100%;
+    border-top: none;
+  }
+
+  .form__field:nth-child(2n) {
+    background: $section-bg-color;
+  }
+
+  .form__legend {
+    @include clear;
+    top: 0;
+    width: 167px;
+    background-color: transparent;
+  }
+
+  .form__field-wrapper {
+    @include fieldFlex;
+  }
+
+  .form__legend-radio {
+    display: inline-block;
+    padding-top: 50px;
+  }
+
+  .form__legend-checkbox {
+    display: inline-block;
+    padding-top: 67px;
+  }
+
+  .form__legend-text {
+    display: inline-block;
+    padding-top: 67px;
+  }
+
+  .form__legend-tel {
+    display: inline-block;
+    padding-top: 67px;
+  }
+
+  .form__legend-email {
+    display: inline-block;
+    padding-top: 5px;
+    padding-left: 1px;
+  }
+
+  .form__legend-message {
+    display: inline-block;
+    padding-top: 67px;
+  }
+
+  .form__field-tel {
+    @include flex-center($direction: row, $align: stretch);
+  }
+
+  .form__action {
+    @include clear;
+    @include flex-center($direction: row, $align: stretch);
+    padding-top: 53px;
+  }
+
+  .form__warning {
+    @include clear;
+    @include text($fw: normal, $color: $word-color, $lh: 30px);
+    width: 334px;
+    margin-left: auto;
+    padding-top: 9px;
+    text-align: right;
+    order: 2;
+  }
+
+  .form__btn {
+    width: 230px;
+    margin: 0;
+    line-height: 16px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .form__field-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .form__legend-span {
+    padding-left: 62px;
+  }
+
+  .form__action {
+    padding-top: 49px;
+    justify-content: center;
+  }
+
+  .form__action-wrapper {
+    @include form-section(700px);
+  }
+
+  .form__warning {
+    padding-top: 10px;
+  }
+
+  .form__legend-email {
+    padding-top: 7px;
+  }
 }

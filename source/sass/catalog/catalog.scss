@@ -9,3 +9,24 @@
 .catalog__item {
   margin-bottom: 30px;
 }
+
+@media (min-width: $view-port-tablet) {
+  .catalog__item {
+    margin-bottom: 54px;
+  }
+
+  .catalog__list {
+    width: 100%;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .catalog__list {
+    @include flex-center($direction: row, $justify: space-between, $align: stretch);
+  }
+
+  .catalog__item {
+    @include clear;
+    margin-bottom: 57px;
+  }
+}

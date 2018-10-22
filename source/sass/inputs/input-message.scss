@@ -5,19 +5,43 @@
   @include clear-list;
   @include flex-center();
   width: 100%;
-  margin-top: 25px;
+  margin-top: 8px;
 }
 
 .input-message__item {
   width: calc(100% - 34px);
   height: 121px;
-  font-size: 17px;
-  line-height: 18px;
-  color: $word-color;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
-  outline: none;
+  font-size: 17px;
+  line-height: 18px;
+  color: $word-color;
   resize: none;
   border: 2px solid $total-color;
+}
+
+@media (min-width: $view-port-tablet) {
+  .input-message {
+    @include clear;
+    @include form-section(501px);
+    @include flex-center();
+    flex-wrap: nowrap;
+    padding-top: 50px;
+    border-bottom: 0;
+  }
+
+  .input-message__item {
+    height: 124px;
+    padding-top: 12px;
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .input-message {
+    @include form-section(700px);
+    margin-left: 8px;
+  }
 }

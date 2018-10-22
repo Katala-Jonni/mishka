@@ -5,11 +5,16 @@
   @include flex-center();
 }
 
+.page-main__wrapper {
+  @include flex-center();
+  width: 100%;
+}
+
 .page-main__promo-wrapper,
 .page-main__hit-wrapper,
 .page-main__advantage-wrapper,
 .page-main__reviews-wrapper,
-.page-main__contacts--wrapper {
+.page-main__contacts-wrapper {
   @include clear;
   @include container;
 }
@@ -57,26 +62,27 @@
   @include clear;
   @include flex-center();
   width: 100%;
+  order: 1;
 }
 
-.page-main__contacts--wrapper {
+.page-main__contacts-wrapper {
   margin-top: 35px;
 }
 
 .page-main__map {
   @include flex-center();
-  width: $view-port-mobile;
   height: 457px;
   margin: 6px auto 0;
-  background: #ffffff url("../../img/map-mobile@1x.jpg") no-repeat;
+  order: 2;
 }
 
 .page-main__write {
   @include clear;
   width: 100%;
+  order: 3;
 }
 
-.page-main__write--wrapper {
+.page-main__write-wrapper {
   @include container;
   margin-top: 39px;
 }
@@ -84,4 +90,203 @@
 .page-main__write-btn {
   @include text($fz: 18px, $lh: 20px, $color: $word-color);
   width: calc(100% - 4px);
+}
+
+// popup
+
+.page-main__popup-wrapper {
+  @include clear;
+  @include container;
+}
+
+///////////// tablet
+
+@media (min-width: $view-port-tablet) {
+  .page-main__popup-wrapper {
+    @include clear;
+    width: 354px;
+    margin: auto;
+  }
+
+  .page-main {
+    margin-top: -44px;
+    border-top: $border-width solid $border-color;
+  }
+
+  .page-main__promo-wrapper,
+  .page-main__hit-wrapper,
+  .page-main__advantage-wrapper,
+  .page-main__reviews-wrapper,
+  .page-main__contacts-wrapper {
+    @include container($view-port-tablet-inline, $wrapper-tablet-indent, $wrapper-tablet-indent);
+  }
+
+  .page-main__slogan {
+    padding-top: 153px;
+    margin-bottom: 375px;
+  }
+
+  .page-main__decor-line {
+    margin-top: 52px;
+    margin-bottom: 49px;
+  }
+
+  .page-main__reviews-wrapper {
+    padding-top: 0;
+  }
+
+  .page-main__advantage {
+    margin-bottom: 23px;
+  }
+
+  .page-main__reviews {
+    padding-bottom: 47px;
+  }
+
+  .page-main__reviews-decor-line {
+    margin-top: 66px;
+    margin-bottom: 10px;
+  }
+
+  .page-main__map {
+    width: $view-port-tablet;
+    height: 457px;
+    margin: 27px auto 0;
+  }
+
+  .page-main__write-wrapper {
+    width: 230px;
+    margin-top: 55px;
+  }
+
+  .page-main__write-btn {
+    @include text($fz: 17px, $lh: 20px, $color: $word-color);
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .page-main {
+    border-top: 0;
+  }
+
+  .page-main__slogan {
+    margin-bottom: 360px;
+  }
+
+  .page-main__hit-wrapper,
+  .page-main__advantage-wrapper,
+  .page-main__reviews-wrapper,
+  .page-main__wrapper {
+    @include container($view-port-desktop, 0, 0);
+  }
+
+  .page-main__advantage {
+    margin-bottom: 30px;
+  }
+
+  .page-main__hit-wrapper {
+    margin-top: 61px;
+  }
+
+  .page-main__decor-line {
+    margin-top: 72px;
+  }
+
+  .page-main__reviews-decor-line {
+    margin-top: 115px;
+    margin-bottom: 71px;
+  }
+
+  .page-main__wrapper {
+    display: block;
+  }
+
+  .page-main__contacts,
+  .page-main__write,
+  .page-main__map {
+    display: inline;
+  }
+
+  .page-main__contacts {
+    width: 500px;
+    float: left;
+  }
+
+  .page-main__contacts-wrapper {
+    @include clear;
+    width: 350px;
+    margin-left: 175px;
+    padding-top: 71px;
+  }
+
+  .page-main__map {
+    @include clear;
+    width: 525px;
+    float: right;
+  }
+
+  .page-main__write {
+    @include clear;
+    display: inline;
+    width: auto;
+    margin-left: 175px;
+    margin-top: 47px;
+    float: left;
+  }
+
+  .page-main__write-wrapper {
+    @include clear;
+  }
+
+  .page-main__wrapper {
+    margin-bottom: 48px;
+  }
+
+  // popup
+
+  .page-main__popup {
+
+  }
+
+  //.page-main__contacts-wrapper {
+  //  @include clear;
+  //  width: 350px;
+  //  margin-left: 175px;
+  //  padding-top: 71px;
+  //}
+  //
+  //.page-main__wrapper {
+  //  @include clear;
+  //  @include container($view-port-desktop, 0, 0);
+  //  display: flex;
+  //  flex-direction: row;
+  //  align-items: stretch;
+  //  flex-wrap: wrap;
+  //  margin-bottom: 48px;
+  //}
+  //
+  //.page-main__contacts {
+  //  width: 500px;
+  //  order: 1;
+  //  margin-bottom: 53px;
+  //}
+  //
+  //.page-main__write {
+  //  width: auto;
+  //  order: 3;
+  //  margin-top: -52px;
+  //  margin-left: 175px;
+  //}
+  //
+  //.page-main__map {
+  //  @include clear;
+  //  width: 525px;
+  //  height: 457px;
+  //  order: 2;
+  //  margin-left: auto;
+  //}
+  //
+  //.page-main__write-wrapper {
+  //  @include clear;
+  //}
 }

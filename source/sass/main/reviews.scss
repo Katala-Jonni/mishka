@@ -17,6 +17,10 @@
   margin-bottom: 27px;
 }
 
+.reviews__text br {
+  display: none;
+}
+
 .reviews__controls {
   @include clear;
   margin-top: 32px;
@@ -35,4 +39,104 @@
 .reviews__write {
   @include text($fz: 18px, $lh: 20px);
   width: calc(100% - 4px);
+}
+
+@media (min-width: $view-port-tablet) {
+  .reviews {
+    @include flex-center();
+    position: relative;
+  }
+
+  .reviews::before {
+    content: "";
+    width: 350px;
+    height: 457px;
+    position: absolute;
+    background: #f7f7f7 url("../../img/review@1x.jpg") no-repeat 0 0;
+    z-index: -1;
+    left: -50px;
+    top: 2px;
+  }
+
+  .reviews__title {
+    @include clear;
+    @include text($fz: 43px, $lh: 50px, $color: $total-color);
+    margin-left: -5px;
+    margin-top: 79px;
+    margin-bottom: 49px;
+    width: 60%;
+    word-break: break-all;
+  }
+
+  .reviews__text {
+    @include text($fz: 17px, $fw: normal, $lh: 30px, $color: $word-color);
+    margin-bottom: 56px;
+  }
+
+  .reviews__author {
+    width: 334px;
+  }
+
+  .reviews__author-name {
+    @include text($fz: 18px, $lh: 24px, $fw: bold);
+  }
+
+  .reviews__author-email {
+    @include text($fz: 17px, $lh: 30px, $fw: normal);
+  }
+
+  .reviews__write {
+    @include text($fz: 18px, $lh: 30px);
+    width: 171px;
+    position: absolute;
+    right: 0;
+    top: 81px;
+  }
+
+  .reviews .button {
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+
+  .reviews__controls {
+    width: 167px;
+    position: absolute;
+    bottom: -33px;
+    right: 6px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .reviews::before {
+    left: 0;
+  }
+
+  .reviews__title {
+    @include text($fz: 53px, $lh: 57px, $color: $total-color);
+    margin-left: 171px;
+    margin-top: 72px;
+    margin-bottom: 49px;
+  }
+
+  .reviews__list {
+    margin-left: 175px;
+  }
+
+  .reviews__text {
+    width: 770px;
+    margin-bottom: 39px;
+  }
+
+  .reviews__text br {
+    display: inline;
+  }
+
+  .reviews__controls {
+    bottom: -34px;
+  }
+
+  .reviews__author-name {
+    @include text($fz: 17px, $lh: 24px, $fw: bold);
+    margin-bottom: 3px;
+  }
 }

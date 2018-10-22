@@ -1,2 +1,149 @@
 @import "../partials/params";
 @import "../partials/mixins";
+
+.popup {
+  @include flex-center();
+  width: $view-port-mobile;
+  margin: auto;
+  background: rgba(#ffffff, 1);
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  box-shadow: 0 5px 5px rgba(#000101, 0.25);
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.popup__title,
+.popup__subtitle,
+.popup__list,
+.popup__item {
+  @include clear;
+}
+
+.popup__title {
+  @include text($fz: 25px, $lh: 30px);
+  width: 150px;
+  text-transform: uppercase;
+  padding-top: 36px;
+}
+
+.popup__subtitle {
+  @include text($fz: 15px, $fw: normal, $lh: 30px, $color: $word-color);
+  padding-top: 25px;
+  padding-bottom: 28px;
+}
+
+.popup__wrapper {
+  @include flex-center($direction: column, $justify: center, $align: center);
+}
+
+.popup__list {
+  @include flex-center($direction: row, $justify: space-between, $align: center);
+  width: 100%;
+}
+
+.popup__item {
+  @include flex-center();
+  width: 78px;
+  height: 48px;
+  border: 2px solid #ececec;
+  text-align: center;
+}
+
+.popup__item__label {
+  @include flex-center();
+  @include text($fz: 16px, $lh: 16px, $color: $word-color);
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.popup__item-text {
+  margin: auto;
+}
+
+.popup__button {
+  @include clear;
+  width: 100%;
+  margin-top: 31px;
+  margin-bottom: 46px;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: $interactive-color;
+  border: none;
+}
+
+@keyframes modalAnimate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.popup__animationModal {
+  animation-name: modalAnimate;
+  animation-delay: 0.5s;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.popup__close:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+  opacity: 1;
+}
+
+.popup__close:active {
+  opacity: 0.1;
+}
+
+.popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.popup__close::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: 0;
+  background: url("../../img/close-cross.svg") no-repeat;
+}
+
+@media (min-width: $view-port-tablet) {
+  .popup {
+    width: 584px;
+    border: 1px solid #c7c7c7;
+  }
+
+  .popup__title {
+    @include text($fz: 30px, $lh: 57px);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .popup__item {
+    width: 108px;
+  }
+
+  .popup__subtitle {
+    font-size: 17px;
+  }
+}

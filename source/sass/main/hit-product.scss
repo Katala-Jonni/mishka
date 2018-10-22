@@ -34,6 +34,12 @@
 
 .hit-product__picture {
   margin-top: 28px;
+  order: 1;
+}
+
+.hit-product__image {
+  width: 260px;
+  height: 315px;
 }
 
 .hit-product__price {
@@ -41,8 +47,138 @@
   @include text();
   margin-top: 19px;
   align-self: center;
+  order: 2;
 }
 
 .hit-product__button {
   margin-top: 25px;
+  order: 2;
+}
+
+@media (min-width: $view-port-tablet) {
+  .hit-product {
+    display: block;
+    flex-direction: row;
+  }
+
+  .hit-product__caption {
+    @include flex-center($direction: row, $align: center);
+    width: 100%;
+    padding-top: 35px;
+    margin-bottom: 45px;
+  }
+
+  .hit-product__title {
+    @include text($fz: 43px, $lh: 50px);
+    margin-right: auto;
+    margin-left: -3px;
+  }
+
+  .hit-product__subtitle {
+    @include text($fz: 17px, $lh: 17px, $color: $interactive-color);
+    width: 130px;
+    text-align: center;
+    padding-top: 2px;
+  }
+
+  .hit-product__picture {
+    @include clear;
+    height: auto;
+    float: right;
+  }
+
+  .hit-product__property {
+    @include clear;
+    width: 290px;
+    display: block;
+  }
+
+  .hit-product__description {
+    @include text($fz: 17px, $lh: 30px, $fw: normal);
+    width: 290px;
+    display: block;
+    margin-bottom: 37px;
+  }
+
+  .hit-product__price {
+    @include clear;
+    @include text($fz: 20px, $lh: 24px);
+    width: 287px;
+    display: block;
+    text-align: center;
+    margin-top: 54px;
+  }
+
+  .hit-product__button {
+    width: 288px;
+    display: block;
+    margin-top: 35px;
+    margin-left: -2px;
+  }
+
+  .hit-product__image {
+    width: 333px;
+    height: 404px;
+    margin-top: 8px;
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .hit-product {
+    position: relative;
+  }
+
+  .hit-product__title {
+    @include clear;
+    @include text($fz: 53px, $lh: 57px);
+    order: 2;
+  }
+
+  .hit-product__subtitle {
+    margin-left: 17px;
+    margin-right: 22px;
+  }
+
+  .hit-product__caption {
+    @include clear;
+    position: absolute;
+    top: 53px;
+  }
+
+  .hit-product__image {
+    @include clear;
+    width: 525px;
+    height: 636px;
+  }
+
+  .hit-product__info {
+    width: 350px;
+    margin-left: 175px;
+    padding-top: 158px;
+  }
+
+  .hit-product__description {
+    margin-left: 175px;
+    padding-top: 158px;
+  }
+
+  .hit-product__description-comma {
+    display: none;
+  }
+
+  .hit-product .hit-product__property {
+    @include clear;
+    padding-top: 19px;
+    margin-left: 175px;
+  }
+
+  .hit-product__price {
+    margin-top: 109px;
+    margin-left: 175px;
+  }
+
+  .hit-product__button {
+    margin-left: 175px;
+  }
 }

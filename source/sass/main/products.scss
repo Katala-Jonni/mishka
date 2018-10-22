@@ -5,3 +5,24 @@
   @include clear-list;
   @include flex-center();
 }
+
+.products__item {
+  width: 100%;
+}
+
+/////////// tablet
+
+@media (min-width: $view-port-tablet) {
+  .products {
+    //outline: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .products__item {
+    width: 50%;
+    box-sizing: border-box;
+    padding-bottom: 12px;
+  }
+}

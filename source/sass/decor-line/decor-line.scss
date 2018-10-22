@@ -1,6 +1,21 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
 .decor-line {
   height: 6px;
   width: 100%;
-  background: black;
-  opacity: 0.2;
+  background: transparent url("../../img/bg-zigzag-line.svg") no-repeat;
+}
+
+@media (min-width: $view-port-tablet) {
+  .decor-line {
+    height: 17px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .decor-line {
+    @include container($view-port-desktop, 0, 0);
+    height: 23px;
+  }
 }

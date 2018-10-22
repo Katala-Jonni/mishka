@@ -1,2 +1,22 @@
 @import "../partials/params";
 @import "../partials/mixins";
+
+@media (min-width: $view-desktop) {
+  .order-list {
+    @include flex-center($direction: row, $justify: flex-start);
+    width: 390px;
+  }
+
+  .order-list__item {
+    margin-right: 60px;
+    box-sizing: border-box;
+  }
+
+  .order-list__link {
+    @include text($fz: 15px);
+  }
+
+  .order-list__item .page-header__wrapper {
+    margin-top: 18px;
+  }
+}

@@ -5,3 +5,25 @@
   @include clear;
   cursor: pointer;
 }
+
+.main-logo__image {
+  width: 86px;
+  height: 35px;
+  vertical-align: bottom;
+}
+
+@media (min-width: $view-port-tablet) {
+  .main-logo__image {
+    width: 117px;
+    height: 46px;
+    margin-left: -2px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .main-logo__image {
+    @include clear;
+    width: 149px;
+    height: 72px;
+  }
+}

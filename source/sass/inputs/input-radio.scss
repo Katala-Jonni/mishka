@@ -4,8 +4,9 @@
 .input-radio {
   @include clear-list;
   @include flex-center();
-  margin-top: 25px;
+  //margin-top: 25px;
   margin-bottom: 11px;
+  margin-top: 8px;
 }
 
 .input-radio__item {
@@ -22,6 +23,7 @@
   position: relative;
   line-height: 18px;
   cursor: pointer;
+  overflow: scroll;
 }
 
 .input-radio__label::before {
@@ -32,4 +34,51 @@
   top: 0;
   left: 0;
   outline: 1px solid red;
+}
+
+@media (min-width: $view-port-tablet) {
+  .input-radio {
+    @include clear;
+    @include form-section;
+    padding-top: 33px;
+    padding-bottom: 26px;
+  }
+
+  .input-radio__item {
+    @include flex-center();
+    margin-bottom: 21px;
+  }
+
+  .input-radio__label {
+    @include clear;
+    @include text($fz: 19px, $lh: 18px, $color: $total-color);
+    //outline: 1px solid green;
+    width: calc(100% - 80px);
+    align-self: center;
+    padding-left: 80px;
+    padding-top: 15px;
+    //height: 40px;
+    //overflow: scroll;
+  }
+
+  .input-radio__label br {
+    display: none;
+  }
+
+  .input-radio__label::before {
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .input-radio__label::before {
+    left: 8px;
+  }
+
+  .input-radio__label {
+    width: calc(100% - 88px);
+    padding-left: 89px;
+  }
 }

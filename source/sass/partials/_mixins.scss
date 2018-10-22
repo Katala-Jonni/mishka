@@ -26,10 +26,10 @@
   color: $color;
 }
 
-@mixin container() {
-  width: $view-port-mobile-inline;
-  padding-left: $wrapper-indent;
-  padding-right: $wrapper-indent;
+@mixin container($width: $view-port-mobile-inline, $pl: $wrapper-indent, $pr: $wrapper-indent) {
+  width: $width;
+  padding-left: $pl;
+  padding-right: $pr;
   margin: 0 auto;
 }
 
@@ -40,9 +40,30 @@
   margin: $m;
 }
 
-@mixin page-title() {
+@mixin page-title($pt:70px, $pb:76px) {
   width: 100%;
   background: $section-bg-color;
-  padding-top: 70px;
-  padding-bottom: 76px;
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin fieldFlex() {
+  display: inherit;
+  flex-flow: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+@mixin form-section($count: 500px) {
+  width: $count;
+}
+
+@mixin visible() {
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: relative;
+  clip-path: none;
+  clip: auto;
 }

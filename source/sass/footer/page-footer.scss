@@ -31,3 +31,62 @@
   padding-top: 18px;
   padding-bottom: 24px;
 }
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: $view-port-tablet) {
+  .page-footer {
+    margin-top: 57px;
+  }
+
+  .page-footer__wrapper {
+    @include flex-center($direction: row);
+    @include container($view-port-tablet-inline, $wrapper-tablet-indent, $wrapper-tablet-indent);
+    padding-top: 51px;
+    padding-bottom: 52px;
+  }
+
+  .page-footer__social {
+    @include clear;
+    width: auto;
+    border-bottom: none;
+    margin-right: auto;
+    padding-top: 6px;
+  }
+
+  .page-footer__copyright {
+    @include clear;
+    padding-top: 5px;
+  }
+
+  .page-footer__logo-picture {
+    vertical-align: bottom;
+  }
+
+  .page-footer__logo {
+    display: block;
+    margin-right: 102px;
+  }
+
+  .page-footer__logo-image {
+    width: 102px;
+    height: 34px;
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .page-footer__wrapper {
+    @include container($view-port-desktop, 0, 0);
+  }
+
+  .page-footer__logo {
+    margin-right: 58px;
+  }
+
+  .page-footer__social {
+    margin-left: auto;
+  }
+}

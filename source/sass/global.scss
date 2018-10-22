@@ -29,7 +29,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   white-space: nowrap;
-  clip-path: inset(100%);
+  clclip-pathip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -48,4 +48,27 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 100;
+  overflow: auto;
+  background: rgba(#ffffff, 0.9);
+}
+
+.overlay-visible {
+  display: block;
+}
+
+@media (min-width: $view-desktop) {
+  .body-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
 }
