@@ -1,32 +1,26 @@
 @import "../partials/params";
 @import "../partials/mixins";
 
-$icon-search: "icon-search.svg";
-$icon-cart: "icon-cart.svg";
-
 .user-list__link {
   @include text();
   position: relative;
 }
 
-.user-list__link::before {
-  content: "";
+.user-list__link-icon-search {
+  width: 18px;
   height: 18px;
-  position: absolute;
+}
+
+.user-list__link-icon-cart {
+  width: 21px;
+  height: 18px;
+}
+
+.user-list__link-icon {
   opacity: 0.2;
-  display: inline-block;
-}
-
-.user-list__link--search::before {
-  @include icon($icon-search, 18px, 18px);
+  position: absolute;
   top: 5px;
-  left: 2px;
-}
-
-.user-list__link--basket::before {
-  @include icon($icon-cart, 21px, 18px);
-  top: 3px;
-  left: 0;
+  left: 1px;
 }
 
 @media (min-width: $view-port-tablet) {
@@ -53,11 +47,7 @@ $icon-cart: "icon-cart.svg";
     display: none;
   }
 
-  .user-list__link--search::before {
-    left: 33px;
-  }
-
-  .user-list__link--basket::before {
-    top: 4px;
+  .user-list__link-icon-search {
+    transform: translate(32px, 1px);
   }
 }

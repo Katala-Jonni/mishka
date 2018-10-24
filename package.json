@@ -47,6 +47,7 @@
     "gulp-if": "^2.0.2",
     "gulp-notify": "^3.2.0",
     "gulp-sourcemaps": "^2.6.4",
-    "stream-combiner2": "^1.1.1"
+    "stream-combiner2": "^1.1.1",
+    "svgxuse": "^1.2.6"
   }
 }

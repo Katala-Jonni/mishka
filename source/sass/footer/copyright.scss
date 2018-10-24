@@ -15,6 +15,11 @@ $academy: "logo-htmlacademy.svg";
 }
 
 .copyright__link {
-  @include icon($icon: $academy, $width: 27px, $height: 34px);
   cursor: pointer;
+}
+
+.copyright__link-icon-academy {
+  width: 27px;
+  height: 34px;
+  color: $interactive-color;
 }

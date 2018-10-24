@@ -16,9 +16,23 @@
   padding-top: 15px;
   font-size: 17px;
   line-height: 18px;
-  color: $word-color;
+  outline: none;
   resize: none;
   border: 2px solid $total-color;
+}
+
+.input-message__item::placeholder {
+  color: rgba($word-color, 0.3);
+}
+
+.input-message__item:hover,
+.input-message__item:active,
+.input-message__item:focus {
+  border-color: $interactive-color;
+}
+
+.input-message__item:active::placeholder {
+  color: rgba($total-color, 1);
 }
 
 @media (min-width: $view-port-tablet) {

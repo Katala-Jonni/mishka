@@ -4,7 +4,6 @@
 .input-radio {
   @include clear-list;
   @include flex-center();
-  //margin-top: 25px;
   margin-bottom: 11px;
   margin-top: 8px;
 }
@@ -15,6 +14,24 @@
   margin-bottom: 11px;
 }
 
+.input-radio__item:hover .input-radio__label::before,
+.input-radio__item input:focus + .input-radio__label::before {
+  border-color: $interactive-color;
+}
+
+.input-radio__item:active .input-radio__label::before {
+  border-color: $word-color;
+  opacity: 0.3;
+}
+
+//.input-radio__item input:focus + .input-radio__label::before {
+//  border-color: $interactive-color;
+//}
+
+.input-radio__item input:checked + .input-radio__label::after {
+  display: inline-block;
+}
+
 .input-radio__label {
   width: calc(100% - 63px);
   height: 40px;
@@ -23,17 +40,29 @@
   position: relative;
   line-height: 18px;
   cursor: pointer;
-  overflow: scroll;
 }
 
 .input-radio__label::before {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   top: 0;
   left: 0;
-  outline: 1px solid red;
+  border: 2px solid $word-color;
+  border-radius: 50%;
+}
+
+.input-radio__label::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 12px;
+  border-radius: 50%;
+  background-color: $interactive-color;
+  display: none;
 }
 
 @media (min-width: $view-port-tablet) {
@@ -52,13 +81,10 @@
   .input-radio__label {
     @include clear;
     @include text($fz: 19px, $lh: 18px, $color: $total-color);
-    //outline: 1px solid green;
     width: calc(100% - 80px);
     align-self: center;
     padding-left: 80px;
     padding-top: 15px;
-    //height: 40px;
-    //overflow: scroll;
   }
 
   .input-radio__label br {
@@ -67,14 +93,25 @@
 
   .input-radio__label::before {
     display: inline-block;
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .input-radio__label::after {
+    width: 21px;
+    height: 21px;
+    top: 15px;
+    left: 15px;
   }
 }
 
 @media (min-width: $view-desktop) {
   .input-radio__label::before {
     left: 8px;
+  }
+
+  .input-radio__label::after {
+    left: 23px;
   }
 
   .input-radio__label {

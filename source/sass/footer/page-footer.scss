@@ -74,6 +74,11 @@
     width: 102px;
     height: 34px;
     vertical-align: bottom;
+    color: #000000;
+  }
+
+  .page-footer__logo-image:hover {
+    color: $interactive-color;
   }
 }
 

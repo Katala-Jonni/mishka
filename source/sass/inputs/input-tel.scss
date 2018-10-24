@@ -1,8 +1,6 @@
 @import "../partials/params";
 @import "../partials/mixins";
 
-$icon-tel: "icon-phone.svg";
-
 .input-tel {
   @include clear-list;
   @include flex-center();
@@ -10,34 +8,66 @@ $icon-tel: "icon-phone.svg";
   margin-bottom: 10px;
 }
 
+.input-tel__input:focus::placeholder,
+.input-tel__input:hover::placeholder {
+  color: rgba($word-color, 0.3);
+}
+
+.input-tel__input:active::placeholder {
+  color: rgba($word-color, 1);
+}
+
+
+.input-tel__input:hover + .input-tel__label,
+.input-tel__input:active + .input-tel__label,
+.input-tel__input:focus + .input-tel__label {
+  border-color: $interactive-color;
+}
+
+.input-tel__input:hover + .input-tel__label > svg,
+.input-tel__input:active + .input-tel__label > svg,
+.input-tel__input:focus + .input-tel__label > svg {
+  color: $interactive-color;
+  opacity: 1;
+}
+
+.input-tel__label {
+  width: 100%;
+  border-bottom: 2px solid $total-color;
+  position: relative;
+  padding-bottom: 1px;
+}
+
 .input-tel__item {
   @include flex-center(row, $justify: space-between);
   width: 100%;
-  border-bottom: 2px solid $total-color;
+  // border-bottom: 2px solid $total-color;
   margin-bottom: 22px;
-  margin-top: 4px;
 }
 
 .input-tel__input {
   @include clear;
   width: calc(100% - 40px);
   align-items: stretch;
-  padding-top: 0;
+  padding-top: 4px;
   padding-bottom: 15px;
   font-size: 19px;
   outline: none;
   border: none;
+  //border-bottom: 2px solid $total-color;
   background: transparent;
 }
 
-.input-tel__label {
-  background: transparent url("../../img/#{$icon-tel}") no-repeat;
+.input-tel__label-icon {
   width: 25px;
   height: 24px;
   margin-top: -3px;
   margin-right: 8px;
   opacity: 0.2;
   cursor: pointer;
+  position: absolute;
+  top: -35px;
+  right: 0;
 }
 
 @media (min-width: $view-port-tablet) {
@@ -51,18 +81,19 @@ $icon-tel: "icon-phone.svg";
   }
 
   .input-tel__item {
-    padding-top: 60px;
+    padding-top: 56px;
   }
 
   .input-tel__input {
     width: calc(100% - 55px);
     padding-left: 16px;
     box-sizing: border-box;
-    padding-bottom: 14.5px;
+    padding-top: 6px;
+    padding-bottom: 15.5px;
   }
 
-  .input-tel__label {
-    margin-right: 26px;
+  .input-tel__label-icon {
+    right: 18px;
   }
 }
 
@@ -72,7 +103,18 @@ $icon-tel: "icon-phone.svg";
     margin-left: 8px;
   }
 
-  .input-tel__label {
+  .input-tel__label-icon {
     margin-right: 8px;
+
+    right: 0;
+  }
+
+  .input-tel__item {
+    padding-top: 54px;
+  }
+
+  .input-tel__input {
+    padding-bottom: 14.5px;
+    padding-top: 9px;
   }
 }

@@ -61,12 +61,18 @@ $img-height: 195px;
   cursor: pointer;
 }
 
-.card__action::after {
+.card__action-basket {
+  width: 20px;
+  height: 19px;
+  opacity: 0.2;
+}
+
+/*.card__action::after {
   @include icon($icon: $action-icon, $width: 20px, $height: 19px);
   content: "";
   display: block;
   opacity: 0.2;
-}
+}*/
 
 .card__price {
   @include text($fz: 15px, $lh: 24px);

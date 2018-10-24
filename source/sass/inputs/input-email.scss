@@ -1,8 +1,6 @@
 @import "../partials/params";
 @import "../partials/mixins";
 
-$icon-email: "icon-mail.svg";
-
 .input-email {
   @include clear-list;
   @include flex-center();
@@ -10,10 +8,38 @@ $icon-email: "icon-mail.svg";
   margin-bottom: 10px;
 }
 
+.input-email__input:focus::placeholder,
+.input-email__input:hover::placeholder {
+  color: rgba($word-color, 0.3);
+}
+
+.input-email__input:active::placeholder {
+  color: rgba($word-color, 1);
+}
+
+.input-email__input:hover + .input-email__label,
+.input-email__input:active + .input-email__label,
+.input-email__input:focus + .input-email__label {
+  border-color: $interactive-color;
+}
+
+.input-email__input:hover + .input-email__label > svg,
+.input-email__input:active + .input-email__label > svg,
+.input-email__input:focus + .input-email__label > svg {
+  color: $interactive-color;
+  opacity: 1;
+}
+
+.input-email__label {
+  width: 100%;
+  border-bottom: 2px solid $total-color;
+  position: relative;
+  padding-bottom: 1px;
+}
+
 .input-email__item {
   @include flex-center(row, $justify: space-between);
   width: 100%;
-  border-bottom: 2px solid $total-color;
   margin-bottom: 22px;
   margin-top: 0;
 }
@@ -22,19 +48,20 @@ $icon-email: "icon-mail.svg";
   @include clear;
   width: calc(100% - 40px);
   padding-top: 6px;
-  padding-bottom: 17px;
+  padding-bottom: 15px;
   font-size: 17px;
   line-height: 18px;
+  outline: none;
   border: none;
   background: transparent;
 }
 
-.input-email__label {
-  background: transparent url("../../img/#{$icon-email}") no-repeat;
+.input-email__label-icon {
   width: 32px;
-  height: 26px;
-  margin-top: 2px;
-  margin-right: 4px;
+  height: 32px;
+  position: absolute;
+  right: 4px;
+  top: -38px;
   opacity: 0.2;
   cursor: pointer;
 }
@@ -46,7 +73,7 @@ $icon-email: "icon-mail.svg";
     @include flex-center();
     flex-wrap: nowrap;
     border-bottom: 0;
-    padding-bottom: 50px;
+    padding-bottom: 52px;
   }
 
   .input-email__item {
@@ -58,15 +85,14 @@ $icon-email: "icon-mail.svg";
     width: calc(100% - 58px);
     padding-top: 0;
     padding-left: 17px;
-    padding-bottom: 0;
+    padding-bottom: 11px;
     font-size: 19px;
     line-height: 18px;
     box-sizing: border-box;
   }
 
-  .input-email__label {
-    margin-right: 22px;
-    margin-top: -1px;
+  .input-email__label-icon {
+    right: 22px;
   }
 }
 
@@ -76,7 +102,7 @@ $icon-email: "icon-mail.svg";
     margin-left: 8px;
   }
 
-  .input-email__label {
-    margin-right: 4px;
+  .input-email__label-icon {
+    right: 4px;
   }
 }

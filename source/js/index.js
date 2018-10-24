@@ -86,5 +86,9 @@ function handleClickOverlay(evt) {
 }
 
 window.addEventListener("keyup", handleKeyUpEscape);
-overlay.addEventListener("click", handleClickOverlay);
-popupClose.addEventListener('click', hiddenModal);
+if (overlay) {
+  overlay.addEventListener("click", handleClickOverlay);
+}
+if (popupClose) {
+  popupClose.addEventListener('click', hiddenModal);
+}
