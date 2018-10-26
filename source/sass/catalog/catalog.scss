@@ -22,11 +22,16 @@
 
 @media (min-width: $view-desktop) {
   .catalog__list {
-    @include flex-center($direction: row, $justify: space-between, $align: stretch);
+    @include flex-center($direction: row, $align: stretch);
   }
 
   .catalog__item {
     @include clear;
     margin-bottom: 57px;
+    margin-right: 51px;
+  }
+
+  .catalog__item:nth-child(3n) {
+    margin-right: 0;
   }
 }

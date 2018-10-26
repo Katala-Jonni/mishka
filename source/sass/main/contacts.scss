@@ -92,6 +92,10 @@
     left: -112px;
   }
 
+  .contacts__list {
+    display: block;
+  }
+
   .contacts__title {
     @include clear;
     @include text($fz: 53px, $lh: 57px);
