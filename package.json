@@ -7,12 +7,25 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
     "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
     "gulp": "4.0.x",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgstore": "^7.0.0",
+    "gulp-webp": "^3.0.0",
     "node-normalize-scss": "^8.0.0",
-    "pixel-glass": "^1.0.13",
+    "posthtml-include": "^1.2.0",
+    "stream-combiner2": "^1.1.1",
     "stylelint": "9.6.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -20,8 +33,10 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
-    "start": "gulp start"
+    "build": "gulp build",
+    "start": "gulp start",
+    "image": "gulp image",
+    "webp": "gul webp"
   },
   "browserslist": [
     "last 2 versions",
@@ -38,16 +53,5 @@
   ],
   "engines": {
     "node": "8.12"
-  },
-  "dependencies": {
-    "del": "^3.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-if": "^2.0.2",
-    "gulp-notify": "^3.2.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "stream-combiner2": "^1.1.1",
-    "svgxuse": "^1.2.6"
   }
 }

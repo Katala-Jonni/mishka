@@ -17,6 +17,7 @@
 }
 
 .user-list__link-icon {
+  @include interactive-icon();
   opacity: 0.2;
   position: absolute;
   top: 5px;

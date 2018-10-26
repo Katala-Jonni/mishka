@@ -43,6 +43,7 @@
 }
 
 .form__btn {
+  @include button-interactive();
   width: 100%;
   background: transparent;
   margin-top: 31px;

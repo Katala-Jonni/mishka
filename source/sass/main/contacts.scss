@@ -27,8 +27,20 @@
   margin-right: 30px;
 }
 
+.contacts__value {
+  color: $word-color;
+}
+
 .contacts__value--border-decor {
   border-bottom: $border-width solid $interactive-color;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $view-port-tablet) {

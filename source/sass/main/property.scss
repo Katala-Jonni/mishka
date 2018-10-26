@@ -4,7 +4,7 @@
 .property {
   @include text($fz: 15px, $fw: normal, $color: $word-color);
   width: 100%;
-  margin-top: 19px;
+  margin-top: 18px;
 }
 
 .property__body {
@@ -18,12 +18,13 @@
 .property__item {
   @include flex-center(row);
   width: 100%;
-  padding: 7px 0 6px 0;
+  padding: 6px 0 7px 0;
+  margin-bottom: 2px;
   border-bottom: $border-width solid $border-color;
 }
 
 .property__item:nth-child(3) {
-  padding-bottom: 9px;
+  padding-bottom: 7px;
 }
 
 @media (min-width: $view-port-tablet) {
@@ -35,18 +36,9 @@
   .property__field {
     width: 33%;
   }
-
-  .property__item:nth-child(3) {
-    padding-top: 9px;
-    padding-bottom: 9px;
-  }
 }
 
 @media (min-width: $view-desktop) {
-  .property {
-
-  }
-
   .property__item {
     @include clear;
     margin-bottom: 6px;

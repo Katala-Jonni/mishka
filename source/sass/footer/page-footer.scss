@@ -18,7 +18,7 @@
 .page-footer__social {
   width: 100%;
   padding-top: 23px;
-  padding-bottom: 30px;
+  padding-bottom: 23px;
   border-bottom: $border-width solid #e5e5e5;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .page-footer__copyright {
-  padding-top: 18px;
+  padding-top: 17px;
   padding-bottom: 24px;
 }
 
@@ -58,7 +58,7 @@
 
   .page-footer__copyright {
     @include clear;
-    padding-top: 5px;
+    padding-top: 1px;
   }
 
   .page-footer__logo-picture {
@@ -79,6 +79,11 @@
 
   .page-footer__logo-image:hover {
     color: $interactive-color;
+  }
+
+  .page-footer__logo-image:active {
+    color: $interactive-color;
+    opacity: 0.3;
   }
 }
 

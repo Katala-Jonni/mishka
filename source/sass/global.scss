@@ -50,10 +50,6 @@ a {
   text-decoration: none;
 }
 
-:focus {
-  //outline: none;
-}
-
 .overlay {
   position: fixed;
   top: 0;
@@ -68,10 +64,6 @@ a {
 
 .overlay-visible {
   display: block;
-}
-
-.icon {
-
 }
 
 @media (min-width: $view-desktop) {

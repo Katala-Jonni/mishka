@@ -10,6 +10,14 @@ $img-height: 195px;
   max-height: 400px;
 }
 
+.card:hover .card__description-box {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:active .card__description-box {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
 .card__title {
   @include clear;
   margin-top: 25px;
@@ -39,6 +47,7 @@ $img-height: 195px;
 
 .card__title-link {
   @include text($fz: 17px, $lh: 24px);
+  @include interactive-opacity();
 }
 
 .card__params {
@@ -62,17 +71,11 @@ $img-height: 195px;
 }
 
 .card__action-basket {
+  @include interactive-icon();
   width: 20px;
   height: 19px;
   opacity: 0.2;
 }
-
-/*.card__action::after {
-  @include icon($icon: $action-icon, $width: 20px, $height: 19px);
-  content: "";
-  display: block;
-  opacity: 0.2;
-}*/
 
 .card__price {
   @include text($fz: 15px, $lh: 24px);

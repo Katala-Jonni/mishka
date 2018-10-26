@@ -1,8 +1,6 @@
 @import "../partials/params";
 @import "../partials/mixins";
 
-$academy: "logo-htmlacademy.svg";
-
 .copyright {
   @include clear;
   @include flex-center(row, space-between, center);
@@ -22,4 +20,16 @@ $academy: "logo-htmlacademy.svg";
   width: 27px;
   height: 34px;
   color: $interactive-color;
+  transform: translate(-1px, 5px);
+
+}
+
+@media (min-width: $view-port-tablet) {
+  .copyright__link-icon-academy:hover {
+    color: $interactive-color;
+  }
+
+  .copyright__link-icon-academy:active {
+    opacity: 0.3;
+  }
 }

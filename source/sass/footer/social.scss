@@ -31,8 +31,21 @@
   height: 20px;
 }
 
+.social__link-icon {
+  color: $total-color;
+}
+
 @media (min-width: $view-port-tablet) {
   .social {
     width: auto;
+  }
+
+  .social__link-icon:hover {
+    color: $interactive-color;
+  }
+
+  .social__link-icon:active {
+    color: $interactive-color;
+    opacity: 0.3;
   }
 }

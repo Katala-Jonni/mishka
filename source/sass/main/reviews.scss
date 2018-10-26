@@ -38,6 +38,7 @@
 
 .reviews__write {
   @include text($fz: 18px, $lh: 20px);
+  @include button-interactive();
   width: calc(100% - 4px);
 }
 

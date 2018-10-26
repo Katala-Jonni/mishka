@@ -14,6 +14,7 @@
 
   .order-list__link {
     @include text($fz: 15px);
+    @include interactive-link;
   }
 
   .order-list__item .page-header__wrapper {

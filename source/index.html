@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка </title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!--<script defer src="../node_modules/svgxuse/svgxuse.js"></script>-->
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
@@ -13,6 +12,9 @@
   <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
+<div style="display: none;">
+  <include src="build/img/sprite.svg"></include>
+</div>
 <div class="body-wrapper">
   <header class="page-header">
     <div class="page-header__wrapper-tablet">
@@ -54,8 +56,9 @@
               <div class="page-header__wrapper user-list__item-wrap">
                 <a class="page-header__link user-list__link " href="#">
                   <span class="user-list__link-icon">
-                    <svg class="user-list__link-icon-search">
-                      <use xlink:href="img/icon.svg#search"></use>
+                    <svg class="user-list__link-icon-search" role="img">
+                      <title>Поиск по сайту</title>
+                      <use xlink:href="#icon-search"></use>
                     </svg>
                   </span>
                   <span class="user-list__link-hid">Поиск по сайту</span>
@@ -64,13 +67,15 @@
             </li>
             <li class="page-header__item user-list__item">
               <div class="page-header__wrapper user-list__item-wrap">
-                <a class="page-header__link user-list__link user-list__link--basket" href="#">
-                   <span class="user-list__link-icon">
-                    <svg class="user-list__link-icon-cart">
-                      <use xlink:href="img/icon.svg#cart"></use>
+                <a class="page-header__link user-list__link user-list__link--basket" href="#" aria-label="Корзина покупок">
+                  <span class="user-list__link-icon">
+                    <svg class="user-list__link-icon-cart" role="img">
+                      <title>Корзина: пока пуста</title>
+                      <use xlink:href="#icon-cart"></use>
                     </svg>
                   </span>
-                  <span class="">Корзина: пока пуста</span></a>
+                  <span>Корзина: пока пуста</span>
+                </a>
               </div>
             </li>
           </ul>
@@ -81,7 +86,7 @@
           <ul class="page-header__list order-list">
             <li class="order-list__item">
               <div class="page-header__wrapper">
-                <a class="order-list__link" href="#">Новые поступления</a>
+                <a class=" order-list__link" href="#">Новые поступления</a>
               </div>
             </li>
             <li class="order-list__item">
@@ -122,12 +127,16 @@
             <p class="hit-product__subtitle ">Товар недели</p>
           </div>
           <picture class="hit-product__picture">
+            <source type="image/webp" media="(min-width: 1150px)"
+                    srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)"
                     srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
                     srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img class="hit-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
-                 alt="Вязаные корзинки">
+            <img class="hit-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
           </picture>
           <p class="hit-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках
             <span class="hit-product__description-comma">,</span> и
@@ -160,48 +169,48 @@
           <ul class="advantage__list">
             <li class="advantage__item">
               <span class="advantage__item-icon">
-                <svg class="advantage__item-ecology">
-                  <use href="img/advantage.svg#flower"></use>
+                <svg class="advantage__item-ecology" aria-hidden="true" role="presentation">
+                  <use xlink:href="#icon-feature-flower"></use>
                 </svg>
               </span>
               Экологически <br> чистые материалы
             </li>
             <li class="advantage__item ">
               <span class="advantage__item-icon">
-                <svg class="advantage__item-economy">
-                  <use href="img/advantage.svg#money"></use>
+                <svg class="advantage__item-economy" aria-hidden="true" role="presentation">
+                  <use xlink:href="#icon-feature-money"></use>
                 </svg>
               </span>
               Скандинавский стиль <br> по российской цене
             </li>
             <li class="advantage__item">
               <span class="advantage__item-icon">
-                <svg class="advantage__item-like">
-                  <use href="img/advantage.svg#heart"></use>
+                <svg class="advantage__item-like" aria-hidden="true" role="presentation">
+                  <use xlink:href="#icon-feature-heart"></use>
                 </svg>
               </span>
               Увеличивает лайки <br> на фотографиях
             </li>
             <li class="advantage__item">
               <span class="advantage__item-icon">
-                <svg class="advantage__item-handmade">
-                  <use href="img/advantage.svg#ball"></use>
+                <svg class="advantage__item-handmade" aria-hidden="true" role="presentation">
+                  <use xlink:href="#icon-feature-ball"></use>
                 </svg>
               </span>
               Связано вручную с <br> любовью и умилением
             </li>
             <li class="advantage__item">
               <span class="advantage__item-icon">
-                <svg class="advantage__item--native-land">
-                  <use href="img/advantage.svg#rocket"></use>
+                <svg class="advantage__item--native-land" aria-hidden="true" role="presentation">
+                  <use xlink:href="#icon-feature-rocket"></use>
                 </svg>
               </span>
               Поддержка отечественного производителя
             </li>
             <li class="advantage__item">
               <span class="advantage__item-icon">
-                <svg class="advantage__item-gift">
-                  <use href="img/advantage.svg#gift"></use>
+                <svg class="advantage__item-gift" aria-hidden="true" role="presentation">
+                  <use xlink:href="#icon-feature-gift"></use>
                 </svg>
               </span>
               Поставляется в <br> подарочной упаковке
@@ -258,7 +267,7 @@
           <ul class="contacts__list">
             <li class="contacts__item">
               <span class="contacts__field">e-mail:</span>
-              <span class="contacts__value contacts__value--border-decor">info@mimimishkashop.ru</span>
+              <a href="mailto:mail@htmlacademy.ru" class="contacts__value contacts__value--border-decor">info@mimimishkashop.ru</a>
             </li>
             <li class="contacts__item">
               <span class="contacts__field">адрес:</span>
@@ -280,9 +289,9 @@
     <h2 class="visually-hidden">Ищите нас в социальных сетях</h2>
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <a class="page-footer__logo-link" href="/">
-          <svg class="page-footer__logo-image">
-            <use xlink:href="img/icon.svg#footer-log"></use>
+        <a class="page-footer__logo-link" href="/" aria-label="Переход на главну страницу сайта">
+          <svg class="page-footer__logo-image" role="img">
+            <use xlink:href="#logo-footer"></use>
           </svg>
         </a>
       </div>
@@ -291,8 +300,8 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Instagram">
               <span class="social__link-icon">
-                <svg class="social__link-icon-in">
-                  <use xlink:href="img/social.svg#instagram"></use>
+                <svg class="social__link-icon-in" role="img">
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </span>
             </a>
@@ -300,8 +309,8 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Facebook">
               <span class="social__link-icon">
-                <svg class="social__link-icon-fb">
-                  <use xlink:href="img/social.svg#facebook"></use>
+                <svg class="social__link-icon-fb" role="img">
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </span>
             </a>
@@ -309,8 +318,8 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Твиттере">
               <span class="social__link-icon">
-                <svg class="social__link-icon-tw">
-                  <use xlink:href="img/social.svg#twitter"></use>
+                <svg class="social__link-icon-tw" role="img">
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </span>
             </a>
@@ -319,10 +328,10 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
           <span class="copyright__link-icon">
-            <svg class="copyright__link-icon-academy">
-              <use xlink:href="img/icon.svg#html-academy"></use>
+            <svg class="copyright__link-icon-academy" role="img">
+              <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </span>
         </a>

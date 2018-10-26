@@ -9,13 +9,14 @@
 .controls__button {
   @include clear;
   @include flex-center($justify: center, $align: center);
+  @include interactive-opacity;
   width: 50%;
   border: $border-width solid $border-color;
   background: #ffffff;
   padding-top: 12px;
   padding-bottom: 12px;
   cursor: pointer;
-  outline: none;
+  padding-right: 4px;
 }
 
 .controls__button::before {

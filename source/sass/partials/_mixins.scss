@@ -67,3 +67,50 @@
   clip-path: none;
   clip: auto;
 }
+
+@mixin interactive-opacity($hov: 0.6, $act: 0.3) {
+  &:hover {
+    opacity: $hov;
+  }
+
+  &:active {
+    opacity: $act;
+  }
+}
+
+@mixin interactive-link($op: 0.6, $color: $word-color) {
+  @include interactive-opacity($hov: $op, $act: 0.3);
+
+  &:hover {
+    color: $color;
+  }
+
+  &:active {
+    color: $color;
+  }
+}
+
+@mixin interactive-icon() {
+  @include interactive-link($op: 1, $color: $interactive-color);
+}
+
+@mixin item-bg() {
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin button-interactive() {
+  &:hover {
+    background-color: $word-color;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+}

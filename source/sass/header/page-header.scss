@@ -13,13 +13,14 @@
 
 .page-header__logo {
   @include clear;
+  @include interactive-link;
   margin-left: 86px;
   padding-top: 21px;
   padding-bottom: 22px;
 }
 
 .page-header__link {
-  //width: 0;
+  @include interactive-link;
   padding-left: 45px;
 }
 

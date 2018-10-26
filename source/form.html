@@ -12,6 +12,9 @@
   <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
+<div style="display: none;">
+  <include src="build/img/sprite.svg"></include>
+</div>
 <div class="body-wrapper">
   <header class="page-header">
     <div class="page-header__wrapper-tablet">
@@ -53,8 +56,9 @@
               <div class="page-header__wrapper user-list__item-wrap">
                 <a class="page-header__link user-list__link " href="#">
                   <span class="user-list__link-icon">
-                    <svg class="user-list__link-icon-search">
-                      <use xlink:href="img/icon.svg#search"></use>
+                    <svg class="user-list__link-icon-search" role="img">
+                      <title>Поиск по сайту</title>
+                      <use xlink:href="#icon-search"></use>
                     </svg>
                   </span>
                   <span class="user-list__link-hid">Поиск по сайту</span>
@@ -64,12 +68,14 @@
             <li class="page-header__item user-list__item">
               <div class="page-header__wrapper user-list__item-wrap">
                 <a class="page-header__link user-list__link user-list__link--basket" href="#">
-                   <span class="user-list__link-icon">
-                    <svg class="user-list__link-icon-cart">
-                      <use xlink:href="img/icon.svg#cart"></use>
+                  <span class="user-list__link-icon">
+                    <svg class="user-list__link-icon-cart" role="img">
+                      <title>Корзина заказов</title>
+                      <use xlink:href="#icon-cart"></use>
                     </svg>
                   </span>
-                  <span class="">Корзина: пока пуста</span></a>
+                  <span>Корзина: пока пуста</span>
+                </a>
               </div>
             </li>
           </ul>
@@ -80,7 +86,7 @@
           <ul class="page-header__list order-list">
             <li class="order-list__item">
               <div class="page-header__wrapper">
-                <a class="order-list__link" href="#">Новые поступления</a>
+                <a class=" order-list__link" href="#">Новые поступления</a>
               </div>
             </li>
             <li class="order-list__item">
@@ -139,9 +145,7 @@
                   <li class="form__item input-checkbox__item">
                     <input class="visually-hidden" type="checkbox" name="color-tiffany" id="tiffany">
                     <label class="input-checkbox__label" for="tiffany">
-                      <small>«</small>
-                      Тиффани
-                      <small>»</small>
+                      <small>«</small>Тиффани<small>»</small>
                     </label>
                   </li>
                   <li class="form__item input-checkbox__item">
@@ -167,22 +171,19 @@
                 <li class="form__item input-text__item">
                   <label class="input-text__label" for="name">Имя:</label>
                   <div class="input-text__input-wrap">
-                    <input class="input-text__input" type="text" name="name" id="name" placeholder="Введите ваше имя*"
-                           required>
+                    <input class="input-text__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
                   </div>
                 </li>
                 <li class="form__item input-text__item">
                   <label class="input-text__label" for="surname">Фамилия:</label>
                   <div class="input-text__input-wrap">
-                    <input class="input-text__input" type="text" name="surname" id="surname"
-                           placeholder="Укажите фамилию*" required>
+                    <input class="input-text__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
                   </div>
                 </li>
                 <li class="form__item input-text__item">
                   <label class="input-text__label" for="second-name">Отчество:</label>
                   <div class="input-text__input-wrap">
-                    <input class="input-text__input" type="text" name="second-name" id="second-name"
-                           placeholder="Отчество, если желаете" required>
+                    <input class="input-text__input" type="text" name="second-name" id="second-name" placeholder="Отчество, если желаете" required>
                   </div>
                 </li>
               </ul>
@@ -194,11 +195,10 @@
                 <div class="form__legend"><span class="form__legend-span form__legend-tel">тел</span></div>
                 <ul class="form__item input-tel">
                   <li class="input-tel__item input-tel__item--icon">
-                    <input class="input-tel__input" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-                           required>
+                    <input class="input-tel__input" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                     <label class="input-tel__label" for="phone" aria-label="Ввведите Ваш телефон">
-                      <svg class="input-tel__label-icon">
-                        <use xlink:href="img/icon.svg#phone"></use>
+                      <svg class="input-tel__label-icon" role="img">
+                        <use xlink:href="#icon-phone"></use>
                       </svg>
                     </label>
                   </li>
@@ -210,11 +210,10 @@
                 <div class="form__legend"><span class="form__legend-span form__legend-email">e-mail</span></div>
                 <ul class="form__item input-email">
                   <li class="input-email__item input-email__item--icon">
-                    <input class="input-email__input" type="email" name="email" id="email" placeholder="Ваш Email*"
-                           required>
+                    <input class="input-email__input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
                     <label class="input-email__label" for="email" aria-label="Ввведите Ваш email">
-                      <svg class="input-email__label-icon">
-                        <use xlink:href="img/icon.svg#mail"></use>
+                      <svg class="input-email__label-icon" role="img">
+                        <use xlink:href="#icon-mail"></use>
                       </svg>
                     </label>
                   </li>
@@ -245,9 +244,9 @@
     <h2 class="visually-hidden">Ищите нас в социальных сетях</h2>
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <a class="page-footer__logo-link" href="/">
-          <svg class="page-footer__logo-image">
-            <use xlink:href="img/icon.svg#footer-log"></use>
+        <a class="page-footer__logo-link" href="/" aria-label="Переход на главну страницу сайта">
+          <svg class="page-footer__logo-image" role="img">
+            <use xlink:href="#logo-footer"></use>
           </svg>
         </a>
       </div>
@@ -256,8 +255,8 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Instagram">
               <span class="social__link-icon">
-                <svg class="social__link-icon-in">
-                  <use xlink:href="img/social.svg#instagram"></use>
+                <svg class="social__link-icon-in" role="img">
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </span>
             </a>
@@ -265,8 +264,8 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Facebook">
               <span class="social__link-icon">
-                <svg class="social__link-icon-fb">
-                  <use xlink:href="img/social.svg#facebook"></use>
+                <svg class="social__link-icon-fb" role="img">
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </span>
             </a>
@@ -274,8 +273,8 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Твиттере">
               <span class="social__link-icon">
-                <svg class="social__link-icon-tw">
-                  <use xlink:href="img/social.svg#twitter"></use>
+                <svg class="social__link-icon-tw" role="img">
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </span>
             </a>
@@ -284,10 +283,10 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
           <span class="copyright__link-icon">
-            <svg class="copyright__link-icon-academy">
-              <use xlink:href="img/icon.svg#html-academy"></use>
+            <svg class="copyright__link-icon-academy" role="img">
+              <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </span>
         </a>
