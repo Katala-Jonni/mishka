@@ -5,7 +5,7 @@
 
 .advantage {
   @include clear;
-  @include flex-center();
+  //@include flex-center();
 }
 
 .advantage__subtitle {
@@ -16,7 +16,7 @@
 
 .advantage__list {
   @include clear-list;
-  @include flex-center();
+//  @include flex-center();
 }
 
 .advantage__item {
@@ -24,7 +24,8 @@
   margin-bottom: 30px;
   position: relative;
   padding-right: 37px;
-  max-width: 260px;
+  //max-width: 260px;
+  box-sizing: border-box;
 }
 
 .advantage__item:nth-child(1) {
@@ -91,10 +92,11 @@
 
 @media (min-width: $view-port-tablet) {
   .advantage__list {
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   // width: 100%;
     min-height: 466px;
-    flex-direction: row;
-    align-content: stretch;
+    overflow: hidden;
   }
 
   .advantage__subtitle {
@@ -106,8 +108,9 @@
 
   .advantage__item {
     @include text($fz: 20px, $lh: 22px);
-    max-width: 100%;
-    width: 50%;
+    //max-width: 100%;
+    //width: 50%;
+    width: 334px;
     margin-bottom: 58px;
     padding-right: 96px;
     box-sizing: border-box;

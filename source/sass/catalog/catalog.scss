@@ -4,6 +4,7 @@
 .catalog__list {
   @include clear-list;
   @include flex-center();
+  overflow: hidden;
 }
 
 .catalog__item {
