@@ -4,17 +4,18 @@
 .products {
   @include clear-list;
   @include flex-center();
+  align-items: stretch;
 }
 
 .products__item {
   width: 100%;
+  min-height: 103px;
 }
 
 /////////// tablet
 
 @media (min-width: $view-port-tablet) {
   .products {
-    //outline: 1px solid red;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -24,5 +25,12 @@
     width: 50%;
     box-sizing: border-box;
     padding-bottom: 12px;
+    min-height: 116px;
+  }
+}
+
+@media (min-width: $view-desktop) {
+  .products__item {
+    min-height: 129px;
   }
 }

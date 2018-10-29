@@ -25,6 +25,7 @@
 .hit-product__description {
   @include clear;
   @include text($fz: 15px, $fw: normal, $color: $word-color);
+  max-width: 260px;
 }
 
 .hit-product__property {
@@ -60,6 +61,7 @@
   .hit-product {
     display: block;
     flex-direction: row;
+    position: relative;
   }
 
   .hit-product__caption {
@@ -83,9 +85,9 @@
   }
 
   .hit-product__picture {
-    @include clear;
-    height: auto;
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 50px;
   }
 
   .hit-product__property {
@@ -96,6 +98,7 @@
 
   .hit-product__description {
     @include text($fz: 17px, $lh: 30px, $fw: normal);
+    max-width: 100%;
     width: 290px;
     display: block;
     margin-bottom: 37px;
@@ -110,7 +113,7 @@
     margin-top: 55px;
   }
 
-  .hit-product__button {
+  .hit-product .hit-product__button {
     width: 288px;
     display: block;
     margin-top: 35px;
@@ -120,7 +123,7 @@
   .hit-product__image {
     width: 333px;
     height: 404px;
-    margin-top: 8px;
+    margin-top: 67px;
     vertical-align: bottom;
   }
 }
@@ -134,6 +137,7 @@
     @include clear;
     @include text($fz: 53px, $lh: 57px);
     order: 2;
+    width: 700px;
   }
 
   .hit-product__subtitle {
@@ -143,8 +147,7 @@
 
   .hit-product__caption {
     @include clear;
-    position: absolute;
-    top: 53px;
+    padding-top: 53px;
   }
 
   .hit-product__image {
@@ -161,7 +164,7 @@
 
   .hit-product__description {
     margin-left: 175px;
-    padding-top: 158px;
+    margin-top: 48px;
   }
 
   .hit-product__description-comma {
@@ -179,7 +182,12 @@
     margin-left: 175px;
   }
 
-  .hit-product__button {
+  .hit-product__picture {
+    top: -25px;
+    z-index: -1;
+  }
+
+  .hit-product .hit-product__button {
     margin-left: 175px;
     margin-top: 35px;
   }

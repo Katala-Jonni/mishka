@@ -17,7 +17,6 @@
   color: rgba($word-color, 1);
 }
 
-
 .input-tel__input:hover + .input-tel__label,
 .input-tel__input:active + .input-tel__label,
 .input-tel__input:focus + .input-tel__label {
@@ -31,6 +30,10 @@
   opacity: 1;
 }
 
+.input-tel__input:invalid:not(:focus) + .input-tel__label {
+  border-bottom: 2px solid #e74246;
+}
+
 .input-tel__label {
   width: 100%;
   border-bottom: 2px solid $total-color;
@@ -41,7 +44,6 @@
 .input-tel__item {
   @include flex-center(row, $justify: space-between);
   width: 100%;
-  // border-bottom: 2px solid $total-color;
   margin-bottom: 22px;
 }
 
@@ -54,7 +56,6 @@
   font-size: 19px;
   outline: none;
   border: none;
-  //border-bottom: 2px solid $total-color;
   background: transparent;
 }
 

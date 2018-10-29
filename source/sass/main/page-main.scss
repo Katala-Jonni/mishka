@@ -35,6 +35,12 @@
   width: 100%;
 }
 
+.page-main__reviews-decor-line,
+.page-main__decor-line {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .page-main__decor-line {
   margin-top: 36px;
   margin-bottom: 32px;
@@ -95,20 +101,9 @@
 
 // popup
 
-.page-main__popup-wrapper {
-  @include clear;
-  @include container;
-}
-
 ///////////// tablet
 
 @media (min-width: $view-port-tablet) {
-  .page-main__popup-wrapper {
-    @include clear;
-    width: 354px;
-    margin: auto;
-  }
-
   .page-main {
     margin-top: -44px;
     border-top: $border-width solid $border-color;

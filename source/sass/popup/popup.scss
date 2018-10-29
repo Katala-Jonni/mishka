@@ -35,6 +35,8 @@
 
 .popup__wrapper {
   @include flex-center($direction: column, $justify: center, $align: center);
+  @include clear;
+  @include container;
 }
 
 .popup__list {
@@ -49,19 +51,19 @@
   text-align: center;
 }
 
-.popup__item input:hover + .popup__item__label {
+.popup__item input:hover + .popup__label {
   border-color: #c7c7c7;
 }
 
-.popup__item input:active + .popup__item__label {
+.popup__item input:active + .popup__label {
   border-color: $interactive-color;
 }
 
-.popup__item input:checked + .popup__item__label {
+.popup__item input:checked + .popup__label {
   border-color: $interactive-color;
 }
 
-.popup__item__label {
+.popup__label {
   @include flex-center();
   @include text($fz: 16px, $lh: 16px, $color: $word-color);
   text-transform: uppercase;
@@ -135,13 +137,19 @@
   height: 22px;
   top: 0;
   left: 0;
-  background: url("../../img/close-cross.svg") no-repeat;
+  background: url("../img/close-cross.svg") no-repeat;
 }
 
 @media (min-width: $view-port-tablet) {
   .popup {
     width: 584px;
     border: 1px solid #c7c7c7;
+  }
+
+  .popup__wrapper {
+    @include clear;
+    width: 354px;
+    margin: auto;
   }
 
   .popup__title {

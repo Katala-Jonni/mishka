@@ -16,7 +16,6 @@
 }
 
 .page-footer__social {
-  width: 100%;
   padding-top: 23px;
   padding-bottom: 23px;
   border-bottom: $border-width solid #e5e5e5;
@@ -50,7 +49,6 @@
 
   .page-footer__social {
     @include clear;
-    width: auto;
     border-bottom: none;
     margin-right: auto;
     padding-top: 6px;
@@ -66,6 +64,9 @@
   }
 
   .page-footer__logo {
+    @include flex-center();
+    flex-wrap: wrap;
+    width: 102px;
     display: block;
     margin-right: 102px;
   }

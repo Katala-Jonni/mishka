@@ -24,10 +24,6 @@
   opacity: 0.3;
 }
 
-//.input-radio__item input:focus + .input-radio__label::before {
-//  border-color: $interactive-color;
-//}
-
 .input-radio__item input:checked + .input-radio__label::after {
   display: inline-block;
 }
@@ -85,10 +81,6 @@
     align-self: center;
     padding-left: 80px;
     padding-top: 15px;
-  }
-
-  .input-radio__label br {
-    display: none;
   }
 
   .input-radio__label::before {

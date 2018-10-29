@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.copyright__link-icon-academy {
+.copyright__icon-academy {
   width: 27px;
   height: 34px;
   color: $interactive-color;
@@ -24,11 +24,11 @@
 }
 
 @media (min-width: $view-port-tablet) {
-  .copyright__link-icon-academy:hover {
+  .copyright__icon-academy:hover {
     color: $interactive-color;
   }
 
-  .copyright__link-icon-academy:active {
+  .copyright__icon-academy:active {
     opacity: 0.3;
   }
 }

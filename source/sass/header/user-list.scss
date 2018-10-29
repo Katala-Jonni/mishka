@@ -6,12 +6,12 @@
   position: relative;
 }
 
-.user-list__link-icon-search {
+.user-list__link-icon--search {
   width: 18px;
   height: 18px;
 }
 
-.user-list__link-icon-cart {
+.user-list__link-icon--cart {
   width: 21px;
   height: 18px;
 }
@@ -48,7 +48,7 @@
     display: none;
   }
 
-  .user-list__link-icon-search {
+  .user-list__link-icon--search {
     transform: translate(32px, 1px);
   }
 }

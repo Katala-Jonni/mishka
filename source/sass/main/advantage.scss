@@ -2,12 +2,6 @@
 @import "../partials/mixins";
 
 // icons
-$flower: "icon-feature-flower.svg";
-$money: "icon-feature-money.svg";
-$heart: "icon-feature-heart.svg";
-$ball: "icon-feature-ball.svg";
-$rocket: "icon-feature-rocket.svg";
-$gift: "icon-feature-gift.svg";
 
 .advantage {
   @include clear;
@@ -29,6 +23,20 @@ $gift: "icon-feature-gift.svg";
   @include text($fz: 17px, $lh: 1.2);
   margin-bottom: 30px;
   position: relative;
+  padding-right: 37px;
+  max-width: 260px;
+}
+
+.advantage__item:nth-child(1) {
+  padding-right: 63px;
+}
+
+.advantage__item:nth-child(3) {
+  padding-right: 56px;
+}
+
+.advantage__item:nth-child(5) {
+  padding-right: 11px;
 }
 
 .advantage__item-icon {
@@ -36,20 +44,20 @@ $gift: "icon-feature-gift.svg";
   color: $interactive-color;
 }
 
-.advantage__item-ecology {
+.advantage__ecology {
   width: 32px;
   height: 37px;
   margin-bottom: 12px;
   margin-left: 8px;
 }
 
-.advantage__item-economy {
+.advantage__economy {
   width: 47px;
   height: 27px;
   margin-bottom: 22px;
 }
 
-.advantage__item-like {
+.advantage__like {
   width: 45px;
   height: 28px;
   margin-top: 4px;
@@ -57,7 +65,7 @@ $gift: "icon-feature-gift.svg";
   margin-left: 3px;
 }
 
-.advantage__item-handmade {
+.advantage__handmade {
   width: 35px;
   height: 34px;
   margin-top: 2px;
@@ -65,7 +73,7 @@ $gift: "icon-feature-gift.svg";
   margin-left: 4px;
 }
 
-.advantage__item--native-land {
+.advantage__native-land {
   width: 55px;
   height: 24px;
   margin-top: 3px;
@@ -73,7 +81,7 @@ $gift: "icon-feature-gift.svg";
   margin-left: -6px;
 }
 
-.advantage__item-gift {
+.advantage__gift {
   width: 33px;
   height: 32px;
   margin-top: 1px;
@@ -81,39 +89,12 @@ $gift: "icon-feature-gift.svg";
   margin-left: 3px;
 }
 
-//.advantage__item::before {
-//  content: "";
-//  display: block;
-//}
-
-//.advantage__item--ecology::before {
-//  //@include icon($icon: $flower, $width: 32px, $height: 37px, $m: 0 0 17px 8px);
-//}
-
-//.advantage__item--economy::before {
-//  @include icon($icon: $money, $width: 47px, $height: 27px, $m: 0 0 26px 0);
-//}
-
-//.advantage__item--like::before {
-//  @include icon($icon: $heart, $width: 45px, $height: 28px, $m: 4px 0 21px 7px);
-//}
-
-//.advantage__item--handmade::before {
-//  @include icon($icon: $ball, $width: 35px, $height: 34px, $m: 2px 0 17px 4px);
-//}
-
-//.advantage__item--native-land::before {
-//  @include icon($icon: $rocket, $width: 55px, $height: 24px, $m: 3px 0 26px -6px);
-//}
-
-//.advantage__item--gift-box::before {
-//  @include icon($icon: $gift, $width: 33px, $height: 32px, $m: 1px 0 20px 3px);
-//}
-
 @media (min-width: $view-port-tablet) {
   .advantage__list {
     width: 100%;
-    height: 466px;
+    min-height: 466px;
+    flex-direction: row;
+    align-content: stretch;
   }
 
   .advantage__subtitle {
@@ -125,8 +106,41 @@ $gift: "icon-feature-gift.svg";
 
   .advantage__item {
     @include text($fz: 20px, $lh: 22px);
+    max-width: 100%;
     width: 50%;
     margin-bottom: 58px;
+    padding-right: 96px;
+    box-sizing: border-box;
+  }
+
+  .advantage__list .advantage__item:nth-child(1) {
+    padding-right: 102px;
+    order: 1;
+  }
+
+  .advantage__item:nth-child(2) {
+    padding-right: 70px;
+    order: 3;
+  }
+
+  .advantage__item:nth-child(3) {
+    padding-right: 92px;
+    order: 5;
+  }
+
+  .advantage__item:nth-child(4) {
+    padding-right: 33px;
+    order: 2;
+  }
+
+  .advantage__item:nth-child(5) {
+    padding-right: 0;
+    order: 4;
+  }
+
+  .advantage__item:nth-child(6) {
+    padding-right: 39px;
+    order: 6;
   }
 }
 
@@ -137,6 +151,16 @@ $gift: "icon-feature-gift.svg";
     margin-right: auto;
   }
 
+  .advantage__list {
+    width: 668px;
+  }
+
+  .advantage__item:nth-child(4),
+  .advantage__item:nth-child(5),
+  .advantage__item:nth-child(6) {
+    padding-left: 16px;
+  }
+
   .advantage__subtitle {
     @include clear;
     @include text($fz: 53px, $lh: 57px);
@@ -144,11 +168,4 @@ $gift: "icon-feature-gift.svg";
     margin-bottom: 50px;
     margin-left: -6px;
   }
-
-  //.advantage__item--ecology {
-  //  //width: 32px;
-  //  //height: 37px;
-  //  margin-bottom: 16px;
-  //  margin-left: 8px;
-  //}
 }

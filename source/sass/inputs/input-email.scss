@@ -30,6 +30,10 @@
   opacity: 1;
 }
 
+.input-email__input:invalid:not(:focus) + .input-email__label {
+  border-bottom: 2px solid #e74246;
+}
+
 .input-email__label {
   width: 100%;
   border-bottom: 2px solid $total-color;

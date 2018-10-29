@@ -26,7 +26,7 @@
 }
 
 .controls__button--prev::before {
-  background: transparent url("../../img/icon-left-arrow.svg") no-repeat;
+  background: transparent url("../img/icon-left-arrow.svg") no-repeat;
 }
 
 .controls__button--next {
@@ -34,7 +34,7 @@
 }
 
 .controls__button--next::before {
-  background: transparent url("../../img/icon-right-arrow.svg") no-repeat;
+  background: transparent url("../img/icon-right-arrow.svg") no-repeat;
 }
 
 @media (min-width: $view-port-tablet) {

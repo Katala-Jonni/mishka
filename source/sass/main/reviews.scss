@@ -15,6 +15,7 @@
   @include clear;
   @include text($fz: 15px, $fw: normal, $lh: 30px, $color: $word-color);
   margin-bottom: 27px;
+  width: 260px;
 }
 
 .reviews__text br {
@@ -53,13 +54,13 @@
     width: 350px;
     height: 457px;
     position: absolute;
-    background: #f7f7f7 url("../../img/review@1x.jpg") no-repeat 0 0;
+    background: #f7f7f7 url("../img/review@1x.jpg") no-repeat 0 0;
     z-index: -1;
     left: -50px;
     top: 2px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/review@2x.jpg");
+      background-image: url("../img/review@2x.jpg");
       background-size: 350px auto;
     }
   }
@@ -77,6 +78,7 @@
   .reviews__text {
     @include text($fz: 17px, $fw: normal, $lh: 30px, $color: $word-color);
     margin-bottom: 56px;
+    width: 660px;
   }
 
   .reviews__author {

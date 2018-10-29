@@ -1,13 +1,11 @@
 @import "../partials/params";
 @import "../partials/mixins";
 
-$action-icon: "icon-cart.svg";
 $img-height: 195px;
 
 .card {
   @include flex-center();
   flex-wrap: nowrap;
-  max-height: 400px;
 }
 
 .card:hover .card__description-box {
@@ -21,6 +19,7 @@ $img-height: 195px;
 .card__title {
   @include clear;
   margin-top: 25px;
+  max-width: 205px;
 }
 
 .card__image {
@@ -91,7 +90,6 @@ $img-height: 195px;
 @media (min-width: $view-port-tablet) {
   .card {
     @include flex-center($direction: row, $justify: space-between, $align: stretch);
-    height: 334px; // временно
   }
 
   .card__image {
@@ -105,6 +103,7 @@ $img-height: 195px;
   }
 
   .card__description-box {
+    display: flex;
     width: 332px;
   }
 
@@ -112,13 +111,13 @@ $img-height: 195px;
     @include clear;
     flex-wrap: nowrap;
     width: 334px - (27 * 2);
-    height: calc(100% - 27px);
     margin: 24px auto 0;
     box-sizing: border-box;
   }
 
   .card__title {
     margin-top: 0;
+    max-width: 100%;
     width: 232px;
   }
 
@@ -133,10 +132,6 @@ $img-height: 195px;
 
   .card__price {
     @include text($fz: 17px, $lh: 24px);
-  }
-
-  .card__description-brd {
-    display: none;
   }
 
   .card__pay {
@@ -188,7 +183,8 @@ $img-height: 195px;
 
   .card__description-box {
     width: auto;
-    height: 195px;
+    min-height: 195px;
+    flex-grow: 1;
   }
 
   .card__info {
