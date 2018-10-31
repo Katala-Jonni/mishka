@@ -3,11 +3,11 @@
 
 .toggle-menu {
   @include clear;
-  @include flex-center(row, $justify: flex-end);
   position: relative;
   border: none;
   cursor: pointer;
-  width: 25px;
+  display: block;
+  width: 20px;
   height: 30px;
   outline: none;
   background: transparent;

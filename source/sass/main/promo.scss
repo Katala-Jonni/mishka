@@ -38,8 +38,8 @@ $bg-color: #fafafa;
   }
 
   .promo--background {
-    background: $bg-color url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
-    background-size: auto;
+    background: $bg-color url("../img/hero-tablet@1x.jpg") no-repeat 50% 0;
+    background-size: 1150px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
@@ -63,9 +63,12 @@ $bg-color: #fafafa;
     display: block;
     position: absolute;
     width: 100%;
-    height: 24px;
+    height: 23px;
     background: transparent url("../img/bg-zigzag-fill.svg");
-    bottom: 0;
+    background-size: 768px;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    bottom: -2px;
     left: 0;
   }
 }
@@ -82,7 +85,10 @@ $bg-color: #fafafa;
     width: 100%;
     height: 24px;
     background: transparent url("../img/bg-zigzag-fill.svg");
-    bottom: 0;
+    background-size: 1250px;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    bottom: -1px;
     left: 0;
   }
 
@@ -93,7 +99,6 @@ $bg-color: #fafafa;
   .promo__order {
     @include clear;
     @include container($view-port-desktop, 50px, 50px);
-    //border-top: $border-width solid $border-color;
     box-sizing: border-box;
   }
 
@@ -109,7 +114,7 @@ $bg-color: #fafafa;
   .promo--background {
     width: 100%;
     background: $bg-color url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
-    background-size: auto;
+    background-size: 1150px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");

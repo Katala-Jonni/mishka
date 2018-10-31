@@ -88,7 +88,7 @@
     @include clear;
     width: auto;
     align-self: flex-start;
-    padding-top: 20px;
+    padding-top: 18px;
   }
 
   .page-header__nav {
@@ -136,12 +136,8 @@
     padding-left: 0;
   }
 
-  .nav-list .page-header__link {
+  .page-header__link {
     padding-left: 0;
-  }
-
-  .nav-list .page-header__item {
-    //padding-top: 4px;
   }
 
   // delivery
@@ -194,10 +190,6 @@
     @include clear;
     @include visible;
     order: 5;
-  }
-
-  .nav-list .page-header__item:nth-child(2) {
-    //padding-left: 34px;
   }
 
   .nav-list .page-header__item {

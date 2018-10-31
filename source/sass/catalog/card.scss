@@ -132,11 +132,12 @@ $img-height: 195px;
 
   .card__price {
     @include text($fz: 17px, $lh: 24px);
+    margin-top: -4px;
   }
 
   .card__pay {
     width: 268px;
-    margin: 22px auto 0;
+    margin: 26px auto 0;
   }
 
   .card__info {
@@ -178,7 +179,7 @@ $img-height: 195px;
 
   .card__pay {
     width: auto;
-    margin-top: 22px;
+    margin-top: 26px;
   }
 
   .card__description-box {

@@ -8,8 +8,9 @@
 }
 
 .products__item {
-  width: 100%;
+  width: 320px;
   min-height: 103px;
+  margin: 0 auto;
 }
 
 /////////// tablet
@@ -31,6 +32,7 @@
 
 @media (min-width: $view-desktop) {
   .products__item {
-    min-height: 129px;
+    min-height: 128px;
+    padding-bottom: 0;
   }
 }

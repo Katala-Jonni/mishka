@@ -3,12 +3,15 @@
 
 @media (min-width: $view-desktop) {
   .order-list {
-    @include flex-center($direction: row, $justify: flex-start);
-    width: 390px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 414px;
   }
 
   .order-list__item {
-    margin-right: 60px;
+    @include clear;
+    display: flex;
+    width: 48%;
     box-sizing: border-box;
   }
 
@@ -17,7 +20,7 @@
     @include interactive-link;
   }
 
-  .order-list__item .page-header__wrapper {
-   // margin-top: 18px;
+  .order-list__item:nth-child(2) {
+    padding-left: 22px;
   }
 }

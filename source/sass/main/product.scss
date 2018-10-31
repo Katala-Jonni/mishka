@@ -14,6 +14,11 @@ $item-bg-color: #56c3b2;
 .product__link {
   @include flex-center(row);
   @include text($fz: 19px, $color: #ffffff);
+  width: 100%;
+  position: relative;
+}
+
+.product__span {
   width: 320px;
   margin: 0 auto;
   padding: 26px 120px 29px 29px;
@@ -21,14 +26,14 @@ $item-bg-color: #56c3b2;
   box-sizing: border-box;
 }
 
-.product__link::after {
+.product__span::after {
   content: "";
   display: inline-block;
   position: absolute;
   opacity: 0.5;
 }
 
-.product__link--decor::after {
+.product__span--decor::after {
   background: url("../img/icon-interior.svg") no-repeat;
   width: 40px;
   height: 62px;
@@ -36,7 +41,7 @@ $item-bg-color: #56c3b2;
   top: 23px;
 }
 
-.product__link--toy::after {
+.product__span--toy::after {
   background: url("../img/icon-toy.svg") no-repeat;
   width: 60px;
   height: 80px;
@@ -53,9 +58,13 @@ $item-bg-color: #56c3b2;
 
   .product__link {
     @include text($fz: 20px, $lh: 30px, $color: #ffffff);
+  }
+
+  .product__span {
     padding-top: 27px;
-    padding-left: 28px;
+    padding-left: 36px;
     padding-right: 120px;
+    margin: 0;
   }
 
   .product--decor:hover,
@@ -83,30 +92,30 @@ $item-bg-color: #56c3b2;
     opacity: 0.3;
   }
 
-  .product__link--decor::after {
-    top: 30px;
-    right: 30px;
+  .product__span--decor::after {
+    top: 28px;
+    right: 23px;
   }
 
-  .product__link--toy::after {
-    top: 31px;
-    right: 27px;
+  .product__span--toy::after {
+    top: 30px;
+    right: 20px;
   }
 }
 
 @media (min-width: $view-desktop) {
-  .product__link {
+  .product__span {
     padding-top: 28px;
     padding-right: 310px;
     padding-left: 36px;
     width: 100%;
   }
 
-  .product__link--decor::after {
+  .product__span--decor::after {
     right: 36px;
   }
 
-  .product__link--toy::after {
+  .product__span--toy::after {
     right: 35px;
   }
 }

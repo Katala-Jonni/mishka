@@ -26,13 +26,17 @@ function getMenuInterface() {
 function hiddenMenu() {
   burgerNav.classList.remove(hiddenClass);
   burgerNavChild.classList.remove(toggleItemActiveClass);
-  mainNav.forEach(item => item.classList.add(hiddenClass));
+  mainNav.forEach(function (item) {
+    item.classList.add(hiddenClass)
+  });
 }
 
 function showMenu() {
   burgerNav.classList.add(hiddenClass);
   burgerNavChild.classList.add(toggleItemActiveClass);
-  mainNav.forEach(item => item.classList.remove(hiddenClass));
+  mainNav.forEach(function (item) {
+    item.classList.remove(hiddenClass)
+  });
 }
 
 function handleResizeChangeMenu() {
@@ -44,7 +48,9 @@ window.addEventListener('resize', handleResizeChangeMenu);
 
 function handleClickToggleBurger() {
   burgerNavChild.classList.toggle(toggleItemActiveClass);
-  mainNav.forEach(item => item.classList.toggle(hiddenClass));
+  mainNav.forEach(function (item) {
+    item.classList.toggle(hiddenClass)
+  });
 }
 
 burgerNav.addEventListener("click", handleClickToggleBurger);
@@ -64,7 +70,9 @@ function showModal(evt) {
   overlay.classList.add(overlayClass);
 }
 
-action.forEach(btn => btn.addEventListener("click", showModal));
+action.forEach(function (btn) {
+  btn.addEventListener("click", showModal)
+});
 
 function hiddenModal() {
   popup.classList.add(hiddenClass);

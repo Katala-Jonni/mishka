@@ -11,10 +11,6 @@
   @include flex-center();
 }
 
-//.reviews__list {
-//  width: 100%
-//}
-
 .reviews__text {
   @include clear;
   @include text($fz: 15px, $fw: normal, $lh: 30px, $color: $word-color);

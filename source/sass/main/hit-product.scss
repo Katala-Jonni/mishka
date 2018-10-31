@@ -34,7 +34,7 @@
 }
 
 .hit-product__picture {
-  margin-top: 26px;
+  margin-top: 27px;
   order: 1;
 }
 
@@ -46,7 +46,7 @@
 .hit-product__price {
   @include clear;
   @include text();
-  margin-top: 19px;
+  margin-top: 18px;
   align-self: center;
   order: 2;
 }
@@ -147,7 +147,7 @@
 
   .hit-product__caption {
     @include clear;
-    padding-top: 53px;
+    padding-top: 54px;
   }
 
   .hit-product__image {
@@ -183,7 +183,7 @@
   }
 
   .hit-product__picture {
-    top: -25px;
+    top: -24px;
     z-index: -1;
   }
 
