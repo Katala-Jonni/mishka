@@ -66,13 +66,27 @@ a {
   display: block;
 }
 
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet) {
+  .container {
+    padding: 0 50px;
+    max-width: 1150px;
+  }
+}
+
 @media (min-width: $view-desktop) {
   .body-wrapper {
     max-width: 1250px;
     margin: 0 auto;
   }
-}
 
-div {
-  outline: 1px dashed red;
+  .container {
+
+  }
 }

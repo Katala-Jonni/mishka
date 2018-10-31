@@ -36,6 +36,10 @@
     border-top: 1px solid #dfdfdf;
   }
 
+  //.page-catalog__list {
+  //  width: 668px;
+  //}
+
   .page-catalog__wrapper-title::after {
     content: "";
     display: block;
@@ -49,6 +53,7 @@
 
   .page-catalog__wrapper {
     @include container($view-port-tablet-inline, $wrapper-tablet-indent, $wrapper-tablet-indent);
+    box-sizing: border-box;
   }
 
   .page-catalog__wrapper-title {

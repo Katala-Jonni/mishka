@@ -36,3 +36,7 @@ $description-width: $view-port-mobile-inline - ($description-indent * 2);
 // retina dpi
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1150px;

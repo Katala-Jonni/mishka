@@ -14,8 +14,11 @@ $item-bg-color: #56c3b2;
 .product__link {
   @include flex-center(row);
   @include text($fz: 19px, $color: #ffffff);
-  position: relative;
+  width: 320px;
+  margin: 0 auto;
   padding: 26px 120px 29px 29px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .product__link::after {
@@ -51,7 +54,8 @@ $item-bg-color: #56c3b2;
   .product__link {
     @include text($fz: 20px, $lh: 30px, $color: #ffffff);
     padding-top: 27px;
-    padding-left: 35px;
+    padding-left: 28px;
+    padding-right: 120px;
   }
 
   .product--decor:hover,
@@ -80,12 +84,13 @@ $item-bg-color: #56c3b2;
   }
 
   .product__link--decor::after {
-    top: 29px;
+    top: 30px;
+    right: 30px;
   }
 
   .product__link--toy::after {
     top: 31px;
-    right: 34px;
+    right: 27px;
   }
 }
 
@@ -93,5 +98,15 @@ $item-bg-color: #56c3b2;
   .product__link {
     padding-top: 28px;
     padding-right: 310px;
+    padding-left: 36px;
+    width: 100%;
+  }
+
+  .product__link--decor::after {
+    right: 36px;
+  }
+
+  .product__link--toy::after {
+    right: 35px;
   }
 }

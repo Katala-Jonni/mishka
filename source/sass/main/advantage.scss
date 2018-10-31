@@ -5,7 +5,7 @@
 
 .advantage {
   @include clear;
-  //@include flex-center();
+  // @include flex-center();
 }
 
 .advantage__subtitle {
@@ -16,7 +16,8 @@
 
 .advantage__list {
   @include clear-list;
-//  @include flex-center();
+  //@include flex-center();
+  overflow: hidden;
 }
 
 .advantage__item {
@@ -24,7 +25,7 @@
   margin-bottom: 30px;
   position: relative;
   padding-right: 37px;
-  //max-width: 260px;
+  //  max-width: 260px;
   box-sizing: border-box;
 }
 
@@ -48,45 +49,45 @@
 .advantage__ecology {
   width: 32px;
   height: 37px;
-  margin-bottom: 12px;
+  margin-bottom: 17px;
   margin-left: 8px;
 }
 
 .advantage__economy {
   width: 47px;
   height: 27px;
-  margin-bottom: 22px;
+  margin-bottom: 27px;
 }
 
 .advantage__like {
   width: 45px;
   height: 28px;
-  margin-top: 4px;
-  margin-bottom: 17px;
-  margin-left: 3px;
+  padding-top: 3px;
+  margin-bottom: 21px;
+  margin-left: 1px;
 }
 
 .advantage__handmade {
   width: 35px;
   height: 34px;
-  margin-top: 2px;
-  margin-bottom: 13px;
-  margin-left: 4px;
+  padding-top: 2px;
+  margin-bottom: 17px;
+  margin-left: 3px;
 }
 
 .advantage__native-land {
   width: 55px;
   height: 24px;
-  margin-top: 3px;
-  margin-bottom: 22px;
+  padding-top: 2px;
+  margin-bottom: 27px;
   margin-left: -6px;
 }
 
 .advantage__gift {
   width: 33px;
   height: 32px;
-  margin-top: 1px;
-  margin-bottom: 17px;
+  padding-top: 1px;
+  margin-bottom: 20px;
   margin-left: 3px;
 }
 
@@ -94,8 +95,9 @@
   .advantage__list {
     display: flex;
     flex-wrap: wrap;
-   // width: 100%;
+    //  width: 100%;
     min-height: 466px;
+    //align-content: stretch;
     overflow: hidden;
   }
 
@@ -108,8 +110,8 @@
 
   .advantage__item {
     @include text($fz: 20px, $lh: 22px);
-    //max-width: 100%;
-    //width: 50%;
+    // max-width: 100%;
+    // width: 50%;
     width: 334px;
     margin-bottom: 58px;
     padding-right: 96px;
@@ -167,8 +169,9 @@
   .advantage__subtitle {
     @include clear;
     @include text($fz: 53px, $lh: 57px);
-    margin-top: 10px;
-    margin-bottom: 50px;
+   // margin-top: 10px;
+    margin-bottom: 49px;
     margin-left: -6px;
+    padding-top: 10px;
   }
 }

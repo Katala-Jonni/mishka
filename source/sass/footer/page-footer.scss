@@ -13,6 +13,7 @@
   @include flex-center();
   @include clear;
   @include container;
+  box-sizing: border-box;
 }
 
 .page-footer__social {

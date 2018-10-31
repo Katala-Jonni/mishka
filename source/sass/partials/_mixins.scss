@@ -28,9 +28,10 @@
 
 @mixin container($width: $view-port-mobile-inline, $pl: $wrapper-indent, $pr: $wrapper-indent) {
   width: $width;
-  padding-left: $pl;
-  padding-right: $pr;
+  //padding-left: $pl;
+  //padding-right: $pr;
   margin: 0 auto;
+ // box-sizing: border-box;
 }
 
 @mixin icon($icon, $width, $height, $m: 0) {

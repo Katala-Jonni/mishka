@@ -61,12 +61,17 @@
 
   .page-header__wrapper-tablet {
     @include flex-center($direction: row, $align: stretch);
-    @include container($view-port-tablet-inline, $wrapper-tablet-indent, $wrapper-tablet-indent);
     display: flex;
     min-height: 88px;
     position: relative;
-  }
 
+    width: auto;
+    box-sizing: border-box;
+    max-width: $tablet;
+    margin: 0 auto;
+    padding-right: $wrapper-tablet-indent;
+    padding-left: $wrapper-tablet-indent;
+  }
   ///////// logo
 
   .page-header__logo {
@@ -82,6 +87,8 @@
   .page-header__wrapper {
     @include clear;
     width: auto;
+    align-self: flex-start;
+    padding-top: 20px;
   }
 
   .page-header__nav {
@@ -91,8 +98,6 @@
     align-items: flex-start;
   }
 
-  /////////////
-
   .page-header__nav:nth-child(2) {
     order: 2;
   }
@@ -100,13 +105,12 @@
   .page-header__nav:nth-child(5) {
     order: 5;
     margin-left: auto;
+    width: 231px;
   }
 
   .page-header__nav:nth-child(3) {
     margin-left: auto;
   }
-
-  //////////////
 
   // nav
 
@@ -137,7 +141,7 @@
   }
 
   .nav-list .page-header__item {
-    padding-top: 4px;
+    //padding-top: 4px;
   }
 
   // delivery
@@ -157,19 +161,29 @@
     width: 100%;
   }
 
+  .page-header__wrapper {
+    padding-top: 18px;
+  }
+
   .page-header__wrapper-tablet {
     @include clear;
-    @include container($view-desktop, 50px, 50px);
+    width: auto;
     box-sizing: border-box;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .page-header__logo-menu {
     order: 2;
+    align-self: flex-start;
+    padding-top: 7px;
   }
 
   .page-header__nav:nth-child(2) {
     order: 1;
-    margin-right: 60px;
+    margin-right: 36px;
   }
 
   .page-header__nav:nth-child(3) {
@@ -183,7 +197,7 @@
   }
 
   .nav-list .page-header__item:nth-child(2) {
-    padding-left: 34px;
+    //padding-left: 34px;
   }
 
   .nav-list .page-header__item {

@@ -3,6 +3,7 @@
 
 .user-list__link {
   @include text();
+  display: flex;
   position: relative;
 }
 
@@ -27,11 +28,13 @@
 @media (min-width: $view-port-tablet) {
   .user-list {
     @include flex-center($direction: row);
+    align-items: stretch;
     width: 348px;
   }
 
   .user-list__item {
     border-left: $border-width solid $border-color;
+    max-width: 348px;
   }
 
   .user-list__item-wrap {

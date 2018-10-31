@@ -1,13 +1,10 @@
 @import "../partials/params";
 @import "../partials/mixins";
 
-.page-main {
-  @include flex-center();
-}
-
 .page-main__wrapper {
   @include flex-center();
   width: 100%;
+  overflow: hidden;
 }
 
 .page-main__promo-wrapper,
@@ -17,6 +14,11 @@
 .page-main__contacts-wrapper {
   @include clear;
   @include container;
+}
+
+.page-main__reviews-wrapper {
+  padding-top: 28px;
+  box-sizing: border-box;
 }
 
 .page-main__slogan {
@@ -35,21 +37,6 @@
   width: 100%;
 }
 
-.page-main__reviews-decor-line,
-.page-main__decor-line {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.page-main__decor-line {
-  margin-top: 36px;
-  margin-bottom: 32px;
-}
-
-.page-main__reviews-decor-line {
-  margin-top: 45px;
-}
-
 .page-main__advantage {
   @include clear;
   width: 100%;
@@ -58,10 +45,6 @@
 .page-main__reviews {
   @include clear;
   width: 100%;
-}
-
-.page-main__reviews-wrapper {
-  padding-top: 26px;
 }
 
 .page-main__contacts {
@@ -80,6 +63,7 @@
   height: 457px;
   margin: 6px auto 0;
   order: 2;
+  width: 100%;
 }
 
 .page-main__write {
@@ -99,7 +83,24 @@
   width: calc(100% - 4px);
 }
 
-// popup
+.page-main__hit::after,
+.page-main__reviews::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 100%;
+  background: transparent url("../img/bg-zigzag-line.svg") no-repeat 50% 50%;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+
+.page-main__hit::after {
+  margin: 36px auto 30px;
+}
+
+.page-main__reviews::after {
+  margin: 45px auto 0;
+}
 
 ///////////// tablet
 
@@ -109,22 +110,35 @@
     border-top: $border-width solid $border-color;
   }
 
+  .page-main__hit::after,
+  .page-main__reviews::after {
+    width: 100%;
+    height: 23px;
+    background-size: 100% 17px;
+  }
+
+  .page-main__hit::after {
+    margin-top: 49px;
+    margin-bottom: 46px;
+  }
+
+  .page-main__reviews::after {
+    margin-top: 109px;
+    margin-bottom: 7px;
+  }
+
   .page-main__promo-wrapper,
   .page-main__hit-wrapper,
   .page-main__advantage-wrapper,
   .page-main__reviews-wrapper,
   .page-main__contacts-wrapper {
     @include container($view-port-tablet-inline, $wrapper-tablet-indent, $wrapper-tablet-indent);
+    box-sizing: border-box;
   }
 
   .page-main__slogan {
     padding-top: 153px;
     margin-bottom: 374px;
-  }
-
-  .page-main__decor-line {
-    margin-top: 52px;
-    margin-bottom: 43px;
   }
 
   .page-main__reviews-wrapper {
@@ -136,16 +150,10 @@
   }
 
   .page-main__reviews {
-    padding-bottom: 47px;
-  }
-
-  .page-main__reviews-decor-line {
-    margin-top: 60px;
-    margin-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .page-main__map {
-    width: $view-port-tablet;
     height: 457px;
     margin: 27px auto 0;
   }
@@ -162,7 +170,23 @@
 
 @media (min-width: $view-desktop) {
   .page-main {
-    border-top: 0;
+   // border-top: 0;
+  }
+
+  .page-main__hit::after,
+  .page-main__reviews::after {
+    width: $view-port-desktop;
+    height: 23px;
+  }
+
+  .page-main__hit::after {
+    margin-top: 72px;
+    margin-bottom: 50px;
+  }
+
+  .page-main__reviews::after {
+    margin-top: 165px;
+    margin-bottom: 69px;
   }
 
   .page-main__slogan {
@@ -184,19 +208,9 @@
     margin-top: 60px;
   }
 
-  .page-main__decor-line {
-    margin-top: 72px;
-    margin-bottom: 50px;
-  }
-
-  .page-main__reviews-decor-line {
-    margin-top: 115px;
-    margin-bottom: 71px;
-  }
-
   .page-main__wrapper {
     display: block;
-    margin-bottom: 48px;
+    margin-bottom: 104px;
   }
 
   .page-main__contacts,
@@ -214,7 +228,7 @@
     @include clear;
     width: 350px;
     margin-left: 175px;
-    padding-top: 71px;
+    padding-top: 70px;
   }
 
   .page-main__map {
