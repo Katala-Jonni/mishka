@@ -118,7 +118,8 @@
 
   .page-main__hit::after,
   .page-main__reviews::after {
-    width: 768px;
+    max-width: 768px;
+    width: auto;
     height: 17px;
     background-size: 100% 17px;
     background-position: 18px 0;
@@ -178,7 +179,8 @@
 @media (min-width: $view-desktop) {
   .page-main__hit::after,
   .page-main__reviews::after {
-    width: $view-port-desktop;
+    //max-width: 768px;
+    max-width: $view-port-desktop;
     height: 23px;
     background-size: 100% 23px;
     background-position: 26px 0;
